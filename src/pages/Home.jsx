@@ -3,7 +3,7 @@ const speakers = [
   {
     name: "Dr. María Esono",
     title: "AI Researcher",
-    img: "/speakers/maria.jpg",
+    img: "/speaker1placeholder.jpg",
   },
   { name: "Carlos Mba", title: "ML Engineer", img: "/speakers/carlos.jpg" },
   { name: "Lucía Nguema", title: "Data Scientist", img: "/speakers/lucia.jpg" },
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <main className="font-sans text-gray-800">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 via-white to-blue-600 text-center py-20 px-4">
+      <section className="bg-[url('/flaglogo.png')] bg-cover bg-center text-white text-center py-75 px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           IndabaX Equatorial Guinea 202X
         </h1>
@@ -82,7 +82,7 @@ export default function Home() {
                 <img
                   src={speaker.img}
                   alt={speaker.name}
-                  className="w-24 h-24 mx-auto rounded-full mb-4 object-cover"
+                  className="w-70 h-70 mx-auto rounded-full mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold">{speaker.name}</h3>
                 <p className="text-sm text-gray-600">{speaker.title}</p>
