@@ -5,8 +5,12 @@ const speakers = [
     title: "AI Researcher",
     img: "/speaker1placeholder.jpg",
   },
-  { name: "Carlos Mba", title: "ML Engineer", img: "/speakers/carlos.jpg" },
-  { name: "Lucía Nguema", title: "Data Scientist", img: "/speakers/lucia.jpg" },
+  { name: "Carlos Mba", title: "ML Engineer", img: "/speaker2placeholder.jpg" },
+  {
+    name: "Lucía Nguema",
+    title: "Data Scientist",
+    img: "/speaker3placeholder.jpg",
+  },
 ];
 // Place holder schedule
 const schedule = [
@@ -28,7 +32,7 @@ export default function Home() {
   return (
     <main className="font-sans text-gray-800">
       {/* Hero Section */}
-      <section className="bg-[url('/flaglogo.png')] bg-cover bg-center text-white text-center py-75 px-4">
+      <section className="bg-[url('/hero2.jpg')] bg-cover bg-center text-white text-center py-75 px-4">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">
           IndabaX Equatorial Guinea 202X
         </h1>
