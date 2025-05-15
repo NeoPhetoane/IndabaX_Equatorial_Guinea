@@ -8,6 +8,7 @@ import Schedule from "./pages/Schedule";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import Registration from "./components/Registration";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/registration" element={<Registration />} />
       </Routes>
       <Footer />
     </>
