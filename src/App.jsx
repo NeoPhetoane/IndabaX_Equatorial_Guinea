@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Registration from "./components/Registration";
+import GoogleTranslate from "./components/GoogleTranslate";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/registration" element={<Registration />} />
       </Routes>
+      <GoogleTranslate />
       <Footer />
     </>
   );
