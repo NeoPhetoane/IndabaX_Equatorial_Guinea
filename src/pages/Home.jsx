@@ -92,6 +92,61 @@ export default function Home() {
         </p>
       </section>
 
+      {/* About Section */}
+      <section className="bg-gray-50 py-12 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Text Content */}
+          <div className="md:w-1/2">
+            <h2 className="text-3xl font-bold mb-4 text-gray-800">
+              About{" "}
+              <span className="text-green-600">IndabaX Equatorial Guinea</span>
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              IndabaX Equatorial Guinea is a local chapter of the Deep Learning
+              Indaba, a pan-African movement to strengthen African AI. Our event
+              offers a unique space for knowledge sharing, community building,
+              and research advancement. It is open to students, professionals,
+              and enthusiasts who want to engage with cutting-edge developments
+              in AI, collaborate with others, and grow their careers through
+              meaningful connections.
+              <br></br>
+              <br></br>
+              We aim to advance our resourceful country using Artificial
+              Intelligence and reach unimaginable heights
+            </p>
+          </div>
+
+          {/* Image Grid */}
+          <div className="relative w-full md:w-1/2 h-[400px] md:h-[500px]">
+            <img
+              src="/aboutsec1.jpg"
+              alt="Top Left"
+              className="absolute top-0 left-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg"
+            />
+            <img
+              src="aboutsec2.jpg"
+              alt="Top Right"
+              className="absolute top-0 right-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg"
+            />
+            <img
+              src="/aboutsec3.jpg"
+              alt="Center"
+              className="absolute top-1/2 left-1/2 w-44 h-44 md:w-56 md:h-56 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-full shadow-xl border-4 border-white"
+            />
+            <img
+              src="/aboutsec4.jpg"
+              alt="Bottom Left"
+              className="absolute bottom-0 left-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md"
+            />
+            <img
+              src="/aboutsec5.jpg"
+              alt="Bottom Right"
+              className="absolute bottom-0 right-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Schedule Highlights */}
       <section className="bg-gray-100 py-16 px-4">
         <div className="max-w-4xl mx-auto">
