@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const team = [
@@ -129,12 +130,12 @@ export default function About() {
           Whether you're a student, educator, or professional — join us in
           shaping the future of AI in Africa.
         </p>
-        <a
-          href="/#register"
-          className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+        <Link
+          to="/registration"
+          className="bg-red-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition"
         >
           Register Now
-        </a>
+        </Link>
       </section>
     </main>
   );
