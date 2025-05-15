@@ -18,7 +18,9 @@ const speakers = [
 const schedule = [
   { time: "09:00 AM", event: "Opening Ceremony" },
   { time: "10:00 AM", event: "Keynote: AI in Africa" },
-  { time: "12:00 PM", event: "Workshop: ML Tools" },
+  { time: "12:00 PM", event: "Panel: Future of ML in Central Africa" },
+  { time: "02:00 PM", event: "Hands-on Workshop: ML Tools" },
+  { time: "04:00 PM", event: "Student Lightning Talks & Networking" },
 ];
 // Place holder testimonials
 const testimonials = [
@@ -66,19 +68,37 @@ export default function Home() {
       </section>
 
       {/* Schedule Highlights */}
-      <section className="bg-gray-100 py-12 px-4">
+      <section className="bg-gray-100 py-16 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
             Schedule Highlights
           </h2>
-          <ul className="space-y-4">
+          <div className="space-y-12">
             {schedule.map((item, index) => (
-              <li key={index} className="flex justify-between border-b pb-2">
-                <span className="font-medium">{item.time}</span>
-                <span>{item.event}</span>
-              </li>
+              <div
+                key={index}
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
+                } md:gap-8`}
+              >
+                {/* Time Block */}
+                <div className="bg-white shadow-md rounded-lg px-6 py-4 w-full md:w-1/2 text-center md:text-right">
+                  <p className="text-sm text-gray-500 mb-1">Time</p>
+                  <p className="text-lg font-semibold text-green-600">
+                    {item.time}
+                  </p>
+                </div>
+
+                {/* Event Block */}
+                <div className="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left">
+                  <p className="text-sm text-gray-500 mb-1">Event</p>
+                  <p className="text-xl font-medium text-gray-800">
+                    {item.event}
+                  </p>
+                </div>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
