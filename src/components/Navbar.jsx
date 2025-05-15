@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const linkClass = "text-white hover:text-gray-300 transition";
+  const linkClass = "text-gray-900 hover:text-gray-300 transition";
 
   return (
-    <header className="sticky top-0 z-50 bg-green-900 shadow-md">
+    <header className="sticky top-0 z-50 bg-gray-100 shadow-md">
       <nav className="max-w-7xl mx-auto px-2 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
           <div className="flex items-center space-x-2">
             <img src="/logo.png" alt="IndabaX Logo" className="h-8 w-auto" />
-            <span className="text-2xl font-bold text-white">
+            <span className="text-2xl font-bold text-gray-900">
               IndabaX - Equatorial Guinea
             </span>
           </div>
