@@ -30,6 +30,31 @@ const testimonials = [
     role: "Student, UNGE",
   },
   { quote: "The talks were world-class.", name: "Pedro A.", role: "Engineer" },
+  {
+    quote: "I met amazing mentors and peers.",
+    name: "Francisco E.",
+    role: "ML Intern",
+  },
+  {
+    quote: "Truly a life-changing experience.",
+    name: "Daniela C.",
+    role: "Research Assistant",
+  },
+  {
+    quote: "A must-attend for anyone in AI!",
+    name: "Miguel T.",
+    role: "Graduate Student",
+  },
+  {
+    quote: "The workshops were hands-on and fun.",
+    name: "Alicia B.",
+    role: "Software Engineer",
+  },
+  {
+    quote: "Incredible community and vibes!",
+    name: "Rafael K.",
+    role: "Tech Enthusiast",
+  },
 ];
 
 export default function Home() {
@@ -126,19 +151,19 @@ export default function Home() {
 
       {/* Testimonials */}
       <section className="bg-blue-50 py-12 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
             What People Are Saying
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow text-center"
+                className="bg-white p-4 rounded-md shadow text-center text-sm"
               >
-                <p className="italic text-lg text-gray-800 mb-4">“{t.quote}”</p>
+                <p className="italic text-gray-800 mb-3">“{t.quote}”</p>
                 <p className="font-semibold">{t.name}</p>
-                <p className="text-sm text-gray-500">{t.role}</p>
+                <p className="text-xs text-gray-500">{t.role}</p>
               </div>
             ))}
           </div>
