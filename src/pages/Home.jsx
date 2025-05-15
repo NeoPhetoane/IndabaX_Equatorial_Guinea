@@ -114,6 +114,14 @@ export default function Home() {
               We aim to advance our resourceful country using Artificial
               Intelligence and reach unimaginable heights
             </p>
+            <br></br>
+            {/* Learn More Button */}
+            <Link
+              to="/about"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-5 rounded transition duration-300"
+            >
+              Learn More
+            </Link>
           </div>
 
           {/* Image Grid */}
