@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import CountdownTimer from "../components/CountdownTimer";
 // Placeholder speakers
 const speakers = [
   {
@@ -83,15 +83,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event Summary */}
-      <section className="max-w-4xl mx-auto py-12 px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Why Attend?</h2>
-        <p className="text-lg text-gray-700">
-          Join researchers, students, and industry professionals for 3 days of
-          talks, workshops, and networking on AI and machine learning in Africa.
-        </p>
-      </section>
-
       {/* About Section */}
       <section className="bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -129,29 +120,45 @@ export default function Home() {
             <img
               src="/aboutsec1.jpg"
               alt="Top Left"
-              className="absolute top-0 left-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg"
+              className="absolute top-0 left-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg hover:scale-150 transform transition duration-300"
             />
             <img
               src="aboutsec2.jpg"
               alt="Top Right"
-              className="absolute top-0 right-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg"
+              className="absolute top-0 right-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg
+             hover:scale-150 transform transition duration-300"
             />
             <img
               src="/aboutsec3.jpg"
               alt="Center"
-              className="absolute top-1/2 left-1/2 w-44 h-44 md:w-56 md:h-56 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-full shadow-xl border-4 border-white"
+              className="absolute top-1/2 left-1/2 w-44 h-44 md:w-56 md:h-56 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-full shadow-xl border-4 border-white
+             hover:scale-150 transform transition duration-300"
             />
             <img
               src="/aboutsec4.jpg"
               alt="Bottom Left"
-              className="absolute bottom-0 left-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md"
+              className="absolute bottom-0 left-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md
+             hover:scale-150 transform transition duration-300"
             />
             <img
               src="/aboutsec5.jpg"
               alt="Bottom Right"
-              className="absolute bottom-0 right-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md"
+              className="absolute bottom-0 right-4 w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg shadow-md
+             hover:scale-150 transform transition duration-300"
             />
           </div>
+        </div>
+      </section>
+
+      {/* Invitation and countdown */}
+      <section className="bg-gray-100 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <CountdownTimer />
+          <p className="text-xl text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+            We’re just days away from an unforgettable gathering of innovators,
+            researchers, and students passionate about AI in Africa. Mark your
+            calendar and get ready to be inspired!
+          </p>
         </div>
       </section>
 
