@@ -12,7 +12,7 @@ const Navbar = () => {
         <Link to="/">
           <div className="flex items-center space-x-2">
             <img src="/logo.png" alt="IndabaX Logo" className="h-8 w-auto" />
-            <span className="text-2xl font-bold text-gray-900">
+            <span className="text-1xl font-bold text-gray-900">
               IndabaX - Equatorial Guinea
             </span>
           </div>

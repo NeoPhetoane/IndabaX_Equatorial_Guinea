@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // Placeholder speakers
 const speakers = [
   {
@@ -32,20 +34,26 @@ export default function Home() {
   return (
     <main className="font-sans text-gray-800">
       {/* Hero Section */}
-      <section className="bg-[url('/hero2.jpg')] bg-cover bg-center text-white text-center py-75 px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
-          IndabaX Equatorial Guinea 202X
-        </h1>
-        <p className="text-lg md:text-2xl mb-6">
-          Date to be confirmed · City, Equatorial Guinea
-        </p>
-        {/*Button component to replace it later */}
-        <a
-          href="#register"
-          className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition"
-        >
-          Register Now
-        </a>
+      <section
+        className="relative bg-cover bg-center text-white text-center py-75 px-4"
+        style={{ backgroundImage: "url('/hero2.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            IndabaX Equatorial Guinea 202X
+          </h1>
+          <p className="text-lg md:text-2xl mb-6">
+            Date to be confirmed · City, Equatorial Guinea
+          </p>
+          {/*Button component to replace it later */}
+          <Link
+            to="/registration"
+            className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+          >
+            Register Now
+          </Link>
+        </div>
       </section>
 
       {/* Event Summary */}
