@@ -1,6 +1,13 @@
 const Contact = () => {
   return (
     <main className="font-sans text-gray-800">
+      {/* Hero banner for contact page */}
+      <section className="bg-[url('/hero6.jpg')] bg-cover bg-center text-white py-32 px-4 space-x-2">
+        <h1 className="text-5xl md:text-6xl font-bold">Contact Us</h1>
+        <p className="mt-4 text-xl md:text-2xl">
+          Do not hesitate to reach out.
+        </p>
+      </section>
       {/* Contact Form */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
