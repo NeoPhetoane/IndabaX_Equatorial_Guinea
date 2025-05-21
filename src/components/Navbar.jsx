@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import GoogleTranslate from "./GoogleTranslate";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const Navbar = () => {
           <Link to="/contact" className={linkClass}>
             Contact
           </Link>
+          <GoogleTranslate />
         </div>
 
         {/* Mobile Toggle Button */}
@@ -80,6 +82,7 @@ const Navbar = () => {
           >
             Contact
           </Link>
+          <GoogleTranslate />
         </div>
       )}
     </header>

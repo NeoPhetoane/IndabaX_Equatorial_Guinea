@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function GoogleTranslate() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("");
 
   useEffect(() => {
     const addScript = () => {
@@ -41,14 +41,17 @@ export default function GoogleTranslate() {
       <div id="google_translate_element" className="hidden" />
 
       {/* Custom Dropdown */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 bg-white border border-gray-300 shadow-md rounded p-2">
+      <div className="relative">
         <select
           value={language}
           onChange={handleChange}
-          className="bg-white text-gray-800 border border-gray-300 rounded px-3 py-1 text-sm focus:outline-none hover:bg-gray-100"
+          className="text-gray-900 hover:text-gray-300 transition focus:outline-none hover:bg-gray-200"
         >
-          <option value="en">🌐 English</option>
-          <option value="es">🇪🇸 Spanish</option>
+          <option value="" disabled hidden>
+            Language
+          </option>
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
         </select>
       </div>
     </>
