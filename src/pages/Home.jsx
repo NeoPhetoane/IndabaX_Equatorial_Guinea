@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-blue-50 py-12 px-4">
+      <section className="bg-gradient-to-tr from-green-100 via-white to-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">
             What People Are Saying
@@ -238,6 +238,21 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="bg-blue-50 py-16 text-center">
+        <h2 className="text-3xl font-bold mb-4">Want to Get Involved?</h2>
+        <p className="text-lg mb-6 text-gray-700">
+          Whether you're a student, educator, or professional — join us in
+          shaping the future of AI in Africa.
+        </p>
+        <Link
+          to="/registration"
+          className="bg-red-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+        >
+          Register Now
+        </Link>
       </section>
     </main>
   );

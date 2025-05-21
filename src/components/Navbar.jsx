@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* Mobile Toggle Button */}
         <button
-          className="md:hidden text-white text-lg font-semibold focus:outline-none"
+          className="md:hidden text-gray-900 text-lg font-semibold focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? "✕" : "☰"}
@@ -50,7 +50,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-green-800">
+        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-gray-100">
           <Link to="/" className={linkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
