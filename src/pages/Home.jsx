@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CountdownTimer from "../components/CountdownTimer";
+import UpcomingEvents from "../components/UpcomingEvents";
 // Placeholder speakers
 const speakers = [
   {
@@ -62,18 +63,21 @@ export default function Home() {
     <main className="font-sans text-gray-800">
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center text-white text-center py-75 px-4"
-        style={{ backgroundImage: "url('/hero2.jpg')" }}
+        className="relative bg-cover bg-center text-white text-center py-75 px-4 sm:px-8 md:px-20"
+        style={{ backgroundImage: "url('/hero10.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            IndabaX Equatorial Guinea 202X
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-6">
+          <h1 className="text-4xl md:text-6xl font-bold">
+            IndabaX Equatorial Guinea
           </h1>
-          <p className="text-lg md:text-2xl mb-6">
-            Date to be confirmed · City, Equatorial Guinea
+          <p className="text-lg md:text-2xl">
+            IndabaX Equatorial Guinea is a local chapter of the Deep Learning
+            Indaba movement. We bring together researchers, students, and AI
+            enthusiasts to share knowledge and build community. Empowering the
+            future of machine learning across Africa, one conversation at a
+            time.
           </p>
-          {/*Button component to replace it later */}
           <Link
             to="/registration"
             className="bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition"
@@ -120,12 +124,12 @@ export default function Home() {
             <img
               src="/aboutsec1.jpg"
               alt="Top Left"
-              className="absolute top-0 left-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg hover:scale-150 transform transition duration-300"
+              className="absolute top-0 left-0 w-36 h-32 md:w-44 md:h-44 object-cover rounded-lg shadow-lg hover:scale-150 transform transition duration-300"
             />
             <img
               src="aboutsec2.jpg"
               alt="Top Right"
-              className="absolute top-0 right-0 w-36 h-36 md:w-44 md:h-44 object-cover rounded-lg shadow-lg
+              className="absolute top-0 right-0 w-36 h-32 md:w-44 md:h-44 object-cover rounded-lg shadow-lg
              hover:scale-150 transform transition duration-300"
             />
             <img
@@ -150,6 +154,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Attend Section */}
+      <section className="bg-green-50 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
+            Why Should *You* Attend?
+          </h2>
+          <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
+            Whether you're an AI aficionado or just curious about what machine
+            learning even *is*,{" "}
+            <span className="text-green-700 font-semibold">
+              IndabaX Equatorial Guinea
+            </span>{" "}
+            is the place to be! We’re mixing mind-blowing talks, hands-on
+            workshops, and enough brain food to keep your neurons firing long
+            after the event.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-left mt-8">
+            <div className="bg-white rounded-xl shadow p-6 hover:scale-105 transform transition duration-300">
+              <h3 className="text-lg font-bold text-green-600 mb-2">Network</h3>
+              <p className="text-gray-600 text-sm">
+                Connect with brilliant minds from across the continent.
+                Students, professionals, researchers — they’ll all be here.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 hover:scale-105 transform transition duration-300">
+              <h3 className="text-lg font-bold text-red-500 mb-2">
+                Learn New Things
+              </h3>
+              <p className="text-gray-600 text-sm">
+                From AI ethics to computer vision, you'll leave knowing way more
+                than you came with. No boring lectures here — just fire content.
+              </p>
+            </div>
+            <div className="bg-white rounded-xl shadow p-6 hover:scale-105 transform transition duration-300">
+              <h3 className="text-lg font-bold text-blue-600 mb-2">
+                Become Inspired
+              </h3>
+              <p className="text-gray-600 text-sm">
+                Hear from thought leaders who are shaping Africa’s AI future.
+                Their journeys might just kickstart yours.
+              </p>
+            </div>
+          </div>
+          <p className="mt-10 text-lg font-medium text-gray-800">
+            So what are you waiting for?{" "}
+            <span className="text-red-600 font-bold">Mark your calendar</span>,
+            grab your spot, and come join the AI movement!
+          </p>
+        </div>
+      </section>
+
       {/* Invitation and countdown */}
       <section className="bg-gray-100 py-16 px-6">
         <div className="max-w-5xl mx-auto text-center">
@@ -161,6 +216,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <UpcomingEvents />
 
       {/* Schedule Highlights */}
       <section className="bg-gray-100 py-16 px-4">
