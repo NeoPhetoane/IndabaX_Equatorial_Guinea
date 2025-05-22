@@ -32,7 +32,7 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="relative bg-gradient-to-tr from-green-100 via-white to-red-100 py-16 px-6 overflow-hidden">
+      <section className="relative bg-gradient-to-tr from-green-100 via-white to-red-100 py-16 px-6 overflow-hidden text-center">
         {/* <img
           src="/nopicture.jpg"
           // alt="AI Chip"
@@ -61,11 +61,9 @@ export default function About() {
             knowledge and create new connections.
           </p>
         </div>
-      </section>
 
-      {/* Core Values Section */}
-      <section className="py-16 px-6 bg-white text-center">
-        <h2 className="text-4xl font-bold mb-6">Our Core Values</h2>
+        {/* Core Values Section */}
+
         <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-10">
           At IndabaX Equatorial Guinea, we aim for:
         </p>
