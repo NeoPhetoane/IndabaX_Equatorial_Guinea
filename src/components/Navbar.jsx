@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import GoogleTranslate from "./GoogleTranslate";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const linkClass = "text-gray-900 hover:text-gray-300 transition";
+  const linkClass = "text-gray-900 hover:text-green-700 transition";
 
   return (
     <header className="sticky top-0 z-50 bg-gray-100 shadow-md">
@@ -21,21 +21,58 @@ const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="space-x-6 hidden md:flex">
-          <Link to="/" className={linkClass}>
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
             Home
-          </Link>
-          <Link to="/about" className={linkClass}>
+          </NavLink>
+
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
             About
-          </Link>
-          <Link to="/speakers" className={linkClass}>
+          </NavLink>
+
+          <NavLink
+            to="/speakers"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
             Speakers
-          </Link>
-          <Link to="/schedule" className={linkClass}>
-            Schedule
-          </Link>
-          <Link to="/contact" className={linkClass}>
+          </NavLink>
+
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
             Contact
-          </Link>
+          </NavLink>
           <GoogleTranslate />
         </div>
 
