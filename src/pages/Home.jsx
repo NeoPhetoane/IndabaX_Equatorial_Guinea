@@ -74,7 +74,7 @@ export default function Home() {
     <main className="font-sans text-gray-800 ">
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center text-white text-center py-75 px-4 sm:px-8 md:px-20"
+        className="relative bg-cover bg-center text-white text-center py-65 px-4 sm:px-8 md:px-20"
         style={{ backgroundImage: "url('/hero1.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
