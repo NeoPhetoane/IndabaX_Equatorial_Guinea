@@ -1,59 +1,89 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-const eventDate = new Date("2025-08-15T09:00:00");
+const CountdownTimer = ({ targetDate }) => {
+  const calculateTimeLeft = () => {
+    const difference = +new Date(targetDate) - +new Date();
+    let timeLeft = {};
 
-function getTimeLeft() {
-  const now = new Date();
-  const diff = eventDate - now;
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      };
+    }
 
-  return diff > 0
-    ? {
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / 1000 / 60) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      }
-    : null;
-}
+    return timeLeft;
+  };
 
-export default function CountdownTimer() {
-  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeLeft());
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  });
+
+  const circleSize = 100;
+  const radius = circleSize / 2 - 5;
+  const circumference = 2 * Math.PI * radius;
+
+  const renderCircle = (value, max, label) => {
+    const progress = (value / max) * circumference;
+
+    return (
+      <div className="flex flex-col items-center">
+        <svg width={circleSize} height={circleSize}>
+          <circle
+            cx={circleSize / 2}
+            cy={circleSize / 2}
+            r={radius}
+            stroke="#eee"
+            strokeWidth="8"
+            fill="none"
+          />
+          <circle
+            cx={circleSize / 2}
+            cy={circleSize / 2}
+            r={radius}
+            stroke="url(#gradient)"
+            strokeWidth="8"
+            strokeDasharray={circumference}
+            strokeDashoffset={circumference - progress}
+            fill="none"
+            strokeLinecap="round"
+            transform={`rotate(-90 ${circleSize / 2} ${circleSize / 2})`}
+          />
+          <defs>
+            <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="green" />
+              <stop offset="100%" stopColor="lime" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div className="-mt-20 text-gray-900 font-bold text-xl">
+          {String(value).padStart(2, "0")}
+        </div>
+        <div className="text-xs text-gray-500 mt-2 uppercase">{label}</div>
+      </div>
+    );
+  };
 
   return (
-    <section //className="bg-white py-16 px-6 border-t border-gray-200"
-    >
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-          {timeLeft ? " The Countdown Has Begun:" : "🎉 It's IndabaX Day!"}
-        </h2>
-
-        {timeLeft ? (
-          <div className="flex justify-center gap-4 sm:gap-8 text-center font-medium text-gray-700">
-            {["days", "hours", "minutes", "seconds"].map((unit, i) => (
-              <div
-                key={i}
-                className="bg-gray-100 px-4 py-4 rounded-lg shadow-sm min-w-[70px]"
-              >
-                <p className="text-2xl md:text-3xl text-green-600 font-bold">
-                  {timeLeft[unit]}
-                </p>
-                <p className="text-sm capitalize">{unit}</p>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-lg text-green-700 font-semibold mt-4">
-            Join us now and be part of the future of African AI.
-          </p>
-        )}
+    <div>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+        The CountDown Has Begun
+      </h2>
+      <div className="flex justify-center items-center gap-6 p-8 rounded-xl">
+        {renderCircle(timeLeft.days || 0, 30, "Days")}
+        {renderCircle(timeLeft.hours || 0, 24, "Hours")}
+        {renderCircle(timeLeft.minutes || 0, 60, "Minutes")}
+        {renderCircle(timeLeft.seconds || 0, 60, "Seconds")}
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default CountdownTimer;

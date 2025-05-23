@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const linkClass = "text-blue-400 hover:underline";
+  const linkClass = "text-green-600 hover:underline";
   return (
-    <footer className="bg-gray-900 text-white py-10 px-6">
+    <footer className="bg-gray-100 text-gray-900 py-6 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Contact Info */}
         <div>
