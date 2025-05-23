@@ -29,32 +29,43 @@ const testimonials = [
     quote: "IndabaX inspired me to pursue AI!",
     name: "Judith N.",
     role: "Student, UNGE",
+    image: "/speaker9placeholder.jpg",
   },
-  { quote: "The talks were world-class.", name: "Pedro A.", role: "Engineer" },
+  {
+    quote: "The talks were world-class.",
+    name: "Pedro A.",
+    role: "Engineer",
+    image: "/speaker2placeholder.jpg",
+  },
   {
     quote: "I met amazing mentors and peers.",
     name: "Francisco E.",
     role: "ML Intern",
+    image: "/speaker4placeholder.jpg",
   },
   {
     quote: "Truly a life-changing experience.",
     name: "Daniela C.",
     role: "Research Assistant",
+    image: "/speaker6placeholder.jpg",
   },
   {
     quote: "A must-attend for anyone in AI!",
     name: "Miguel T.",
     role: "Graduate Student",
+    image: "/speaker7placeholder.jpg",
   },
   {
     quote: "The workshops were hands-on and fun.",
     name: "Alicia B.",
     role: "Software Engineer",
+    image: "/speaker5placeholder.jpg",
   },
   {
     quote: "Incredible community and vibes!",
     name: "Rafael K.",
     role: "Tech Enthusiast",
+    image: "/speaker8placeholder.jpg",
   },
 ];
 
@@ -63,7 +74,7 @@ export default function Home() {
     <main className="font-sans text-gray-800 ">
       {/* Hero Section */}
       <section
-        className="relative bg-cover bg-center text-white text-center py-75 px-4 sm:px-8 md:px-20"
+        className="relative bg-cover bg-center text-white text-center py-65 px-4 sm:px-8 md:px-20"
         style={{ backgroundImage: "url('/hero1.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
@@ -342,19 +353,49 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-gradient-to-tr from-green-100 via-white to-gray-50 py-12 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
+      <section className="bg-gray-100 py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-800 mb-12">
             What People Are Saying
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+
+          <div className="flex flex-wrap justify-center gap-8">
             {testimonials.map((t, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-md shadow text-center text-sm"
+                className="bg-white max-w-xs w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
               >
-                <p className="italic text-gray-800 mb-3">“{t.quote}”</p>
-                <p className="font-semibold">{t.name}</p>
+                <div className="text-5xl text-green-500 mb-4">“</div>
+
+                <p className="italic text-gray-700 mb-4">"{t.quote}"</p>
+
+                <div className="w-16 h-16 mb-2 rounded-full bg-gray-200 overflow-hidden">
+                  {t.image ? (
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center h-full text-gray-400">
+                      <svg
+                        className="w-8 h-8"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+
+                <p className="font-semibold text-gray-900">{t.name}</p>
                 <p className="text-xs text-gray-500">{t.role}</p>
               </div>
             ))}

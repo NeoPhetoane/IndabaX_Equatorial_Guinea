@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   const linkClass = "text-green-600 hover:underline";
   return (
-    <footer className="bg-gray-100 text-gray-900 py-6 px-6">
+    <footer className="bg-green-100 text-gray-900 py-6 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Contact Info */}
         <div>
@@ -79,7 +79,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
-              className="text-white hover:text-blue-400 transition"
+              className="text-green-700 hover:text-green-600 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-white hover:text-blue-600 transition"
+              className="text-green-700 hover:text-green-600 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-white hover:text-blue-500 transition"
+              className="text-green-700 hover:text-green-600 transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
