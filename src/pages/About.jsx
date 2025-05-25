@@ -1,28 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OrganisingTeam from "../components/OrganisingTeam";
 
 export default function About() {
-  const team = [
-    {
-      name: "Ana María Nchama",
-      role: "Lead Organizer",
-      bio: "Ana is a machine learning enthusiast focused on community building and AI education in Equatorial Guinea.",
-      img: "/team1.jpg",
-    },
-    {
-      name: "David Obiang",
-      role: "Technical Lead",
-      bio: "David is a software engineer passionate about using AI to solve local challenges.",
-      img: "/team2.jpg",
-    },
-    {
-      name: "Lucía Ndong",
-      role: "Logistics Coordinator",
-      bio: "Lucía ensures smooth operations and handles all event logistics with great detail.",
-      img: "/team3.jpg",
-    },
-  ];
-
   return (
     <main className="font-sans text-gray-800">
       {/* Hero banner for About page */}
@@ -97,29 +77,7 @@ export default function About() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-4xl font-bold mb-10">Meet the Organizing Team</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          {team.map((member, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md p-6">
-              <img
-                src={member.img}
-                alt={member.name}
-                className="w-32 h-32 mx-auto rounded-full object-cover mb-4"
-              />
-              <h3 className="text-xl font-semibold text-green-700">
-                {member.name}
-              </h3>
-              <p className="text-sm text-blue-700 font-medium mb-2">
-                {member.role}
-              </p>
-              <p className="text-sm text-gray-700">{member.bio}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <OrganisingTeam />
 
       {/* Call to Action */}
       <section className="bg-blue-50 py-16 text-center">
