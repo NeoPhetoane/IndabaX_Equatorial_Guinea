@@ -1,4 +1,31 @@
+import { useState } from "react";
+
+const events = [
+  "Tech Conference 2025",
+  "AI & ML Summit",
+  "Web Dev Workshop",
+  "Startup Pitch Night",
+  "Cloud Expo",
+];
+
 export default function Registration() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    event: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Registration Data:", formData);
+    alert("Registered successfully!");
+  };
   return (
     <main className="font-sans text-gray-800">
       {/* Hero */}
@@ -12,96 +39,80 @@ export default function Registration() {
         </div>
       </section>
 
-      {/* Event Info & Form */}
-      <section className="py-20 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
-          {/* Event Details */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-gray-800">
-              Event Details
-            </h2>
-            <ul className="space-y-4 text-lg text-gray-700">
-              <li>
-                <strong>Date:</strong> August 15, 2025
-              </li>
-              <li>
-                <strong>Location:</strong> Malabo, Equatorial Guinea
-              </li>
-              <li>
-                <strong>Venue:</strong> Universidad Nacional de Guinea
-                Ecuatorial
-              </li>
-              <li>
-                <strong>Who should attend?</strong> Students, researchers,
-                developers, and anyone passionate about AI/ML in Africa.
-              </li>
-              <li>
-                <strong>What to expect:</strong> Inspiring talks, hands-on
-                workshops, community building, and exciting networking
-                opportunities.
-              </li>
-            </ul>
-          </div>
-
-          {/* Custom Registration Form */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-blue-700">
-              Register Now
-            </h2>
-            <form className="bg-white p-8 rounded-lg shadow space-y-6">
+      {/* Form */}
+      <section className="min-h-screen text-gray-800">
+        <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex flex-col items-center justify-center px-4">
+          <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
+            Register Here
+          </h2>
+          <p>Enter your details here, and join us at our exiting events</p>
+          <div className="backdrop-blur-lg bg-white/70 shadow-xl rounded-2xl p-12 w-[90%] sm:w-[80%] lg:w-[70%] max-w-5xl">
+            <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label htmlFor="name" className="block font-medium mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Full Name
                 </label>
                 <input
-                  id="name"
                   name="name"
                   type="text"
                   required
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block font-medium mb-2">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Email Address
                 </label>
                 <input
-                  id="email"
                   name="email"
                   type="email"
                   required
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="affiliation" className="block font-medium mb-2">
-                  Affiliation (e.g., University or Company)
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Phone Number
                 </label>
                 <input
-                  id="affiliation"
-                  name="affiliation"
-                  type="text"
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+                  name="phone"
+                  type="tel"
+                  required
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
                 />
               </div>
 
               <div>
-                <label htmlFor="interests" className="block font-medium mb-2">
-                  Areas of Interest
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Select Event
                 </label>
-                <textarea
-                  id="interests"
-                  name="interests"
-                  rows="3"
-                  className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
-                />
+                <select
+                  name="event"
+                  required
+                  value={formData.event}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-green-500"
+                >
+                  <option value="">-- Choose an event --</option>
+                  {events.map((event, idx) => (
+                    <option key={idx} value={event}>
+                      {event}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-red-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+                className="w-full py-3 text-white bg-green-600 rounded-lg hover:bg-green-700 transition duration-300 font-semibold"
               >
                 Submit Registration
               </button>
