@@ -62,6 +62,31 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
+            to="/schedule"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
+            Schedule
+          </NavLink>
+          <NavLink
+            to="/events"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive
+                  ? "text-green-600 border-b-2 border-green-600 pb-1"
+                  : ""
+              }`
+            }
+          >
+            Events
+          </NavLink>
+
+          <NavLink
             to="/contact"
             className={({ isActive }) =>
               `${linkClass} ${

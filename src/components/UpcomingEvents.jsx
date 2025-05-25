@@ -79,7 +79,7 @@ export default function UpcomingEvents() {
               <div className="relative z-10">
                 <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
                 <p className="text-sm">{event.description}</p>
-                <Link to="/registration">
+                <Link to="/events">
                   <button className="mt-6 bg-white text-black text-sm font-semibold px-4 py-2 rounded-md hover:bg-green-600">
                     Read More
                   </button>
