@@ -1,20 +1,8 @@
 import { Link } from "react-router-dom";
 import CountdownTimer from "../components/CountdownTimer";
 import UpcomingEvents from "../components/UpcomingEvents";
-// Placeholder speakers
-const speakers = [
-  {
-    name: "Dr. María Esono",
-    title: "AI Researcher",
-    img: "/speaker1placeholder.jpg",
-  },
-  { name: "Carlos Mba", title: "ML Engineer", img: "/speaker2placeholder.jpg" },
-  {
-    name: "Lucía Nguema",
-    title: "Data Scientist",
-    img: "/speaker3placeholder.jpg",
-  },
-];
+import OrganisingTeam from "../components/OrganisingTeam";
+
 // Place holder schedule
 const schedule = [
   { time: "09:00 AM", event: "Opening Ceremony" },
@@ -330,27 +318,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Speakers */}
-      <section className="py-12 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">
-            Featured Speakers
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
-            {speakers.map((speaker, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-6 shadow">
-                <img
-                  src={speaker.img}
-                  alt={speaker.name}
-                  className="w-70 h-70 mx-auto rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold">{speaker.name}</h3>
-                <p className="text-sm text-gray-600">{speaker.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Organising Team */}
+      <OrganisingTeam />
 
       {/* Testimonials */}
       <section className="bg-gray-100 py-20 px-6">

@@ -102,7 +102,7 @@ export default function OrganisingTeam() {
         {/* Carousel */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-6 px-2 pb-8"
+          className="flex overflow-x-auto scroll-smooth snap-x snap-mandatory space-x-6 px-2 pb-8 hide-scrollbar"
         >
           {team.map((member, index) => (
             <div
