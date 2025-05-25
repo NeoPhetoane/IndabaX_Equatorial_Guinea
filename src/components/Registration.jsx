@@ -41,7 +41,7 @@ export default function Registration() {
 
       {/* Form */}
       <section className="min-h-screen text-gray-800">
-        <div className="min-h-screen bg-gradient-to-br from-green-50 to-green-100 flex flex-col items-center justify-center px-4">
+        <div className="min-h-screen bg-gradient-to-tr from-green-100 via-white to-red-100 flex flex-col items-center justify-center px-4">
           <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
             Register Here
           </h2>

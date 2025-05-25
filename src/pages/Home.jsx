@@ -63,7 +63,7 @@ export default function Home() {
       {/* Hero Section */}
       <section
         className="relative bg-cover bg-center text-white text-center py-65 px-4 sm:px-8 md:px-20"
-        style={{ backgroundImage: "url('/hero1.jpg')" }}
+        style={{ backgroundImage: "url('/hero12.jpg')" }}
       >
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-6">

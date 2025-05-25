@@ -118,10 +118,8 @@ export default function OrganisingTeam() {
                 alt={member.name}
                 className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
               />
-              <h3 className="text-xl font-bold text-green-700">
-                {member.name}
-              </h3>
-              <p className="text-sm text-blue-600 font-semibold mb-2">
+              <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
+              <p className="text-sm text-green-500 font-semibold mb-2">
                 {member.role}
               </p>
               <p className="text-sm text-gray-700">{member.bio}</p>
