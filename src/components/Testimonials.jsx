@@ -96,11 +96,7 @@ export default function Testimonials() {
           </h2>
 
           {/* Carousel here */}
-          <Carousel
-            cards={testimonialCards}
-            visibleCount={1}
-            autoPlayInterval={4000}
-          />
+          <Carousel cards={testimonialCards} />
         </div>
       </section>
     </main>
