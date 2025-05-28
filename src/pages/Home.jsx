@@ -4,57 +4,90 @@ import UpcomingEvents from "../components/UpcomingEvents";
 import OrganisingTeam from "../components/OrganisingTeam";
 import ScheduleHighlights from "../components/ScheduleHighlights";
 import SiteHero from "../components/SiteHero";
-// Place holder testimonials
-const testimonials = [
-  {
-    quote: "IndabaX inspired me to pursue AI!",
-    name: "Judith N.",
-    role: "Student, UNGE",
-    image: "/speaker9placeholder.jpg",
-  },
-  {
-    quote: "The talks were world-class.",
-    name: "Pedro A.",
-    role: "Engineer",
-    image: "/speaker2placeholder.jpg",
-  },
-  {
-    quote: "I met amazing mentors and peers.",
-    name: "Francisco E.",
-    role: "ML Intern",
-    image: "/speaker4placeholder.jpg",
-  },
-  {
-    quote: "Truly a life-changing experience.",
-    name: "Daniela C.",
-    role: "Research Assistant",
-    image: "/speaker6placeholder.jpg",
-  },
-  {
-    quote: "A must-attend for anyone in AI!",
-    name: "Miguel T.",
-    role: "Graduate Student",
-    image: "/speaker7placeholder.jpg",
-  },
-  {
-    quote: "The workshops were hands-on and fun.",
-    name: "Alicia B.",
-    role: "Software Engineer",
-    image: "/speaker5placeholder.jpg",
-  },
-  {
-    quote: "Incredible community and vibes!",
-    name: "Rafael K.",
-    role: "Tech Enthusiast",
-    image: "/speaker8placeholder.jpg",
-  },
-];
+import Hero2025 from "../components/Hero2025";
+import { PinIcon, BrainIcon, LucideLightbulb } from "lucide-react";
+import Testimonials from "../components/Testimonials";
 
 export default function Home() {
   return (
     <main className="font-sans text-gray-800 ">
       {/* Hero Section */}
       <SiteHero />
+      <Hero2025 />
+
+      {/* Why Attend Section */}
+      <section className="bg-gray-100 py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
+            Why Should You Attend?
+          </h2>
+          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+            Whether you are an AI enthusiast or just curious about what machine
+            learning even is,{" "}
+            <span className="text-green-700 font-semibold">
+              IndabaX Equatorial Guinea
+            </span>{" "}
+            is the place to be. We are combining informative talks, hands-on
+            workshops, and enough brain stimulation to have your interest
+            piqued.
+          </p>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Card 1 */}
+            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+              <div className="mb-4">
+                <PinIcon className="text-green-600 items-center" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Network
+              </h3>
+              <p className="text-sm text-gray-600">
+                Connect with brilliant minds from across the continent.
+                Students, professionals, researchers. They will all be here.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+              <div className="absolute top-0 left-0 w-full h-2 bg-red-500 rounded-t-xl" />
+              <div className="mb-4">
+                <BrainIcon className="text-green-600 items-center" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Learn New Things
+              </h3>
+              <p className="text-sm text-gray-600">
+                From AI ethics to computer vision, you will leave knowing way
+                more than you came with.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+              <div className="mb-4">
+                <LucideLightbulb className="text-green-600 items-center" />
+              </div>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                Become Inspired
+              </h3>
+              <p className="text-sm text-gray-600">
+                Hear from thought leaders who are shaping Africa’s AI future.
+                Their journeys might just kickstart yours.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-12 text-lg font-medium text-gray-800">
+            So what are you waiting for?{" "}
+            <span className="text-red-600 font-bold">Mark your calendar</span>,
+            grab your spot, and come join the AI movement!
+          </p>
+        </div>
+      </section>
+
       {/* About Section */}
       <section className="bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
@@ -118,137 +151,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Attend Section */}
-      <section className="bg-gray-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
-            Why Should You Attend?
-          </h2>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
-            Whether you are an AI enthusiast or just curious about what machine
-            learning even is,{" "}
-            <span className="text-green-700 font-semibold">
-              IndabaX Equatorial Guinea
-            </span>{" "}
-            is the place to be. We are combining informative talks, hands-on
-            workshops, and enough brain stimulation to have your interest
-            piqued.
-          </p>
-
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
-              <div className="mb-4">
-                <svg
-                  className="w-12 h-12 text-gray-500 mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.657 16.657L13.414 12.414A4 4 0 0012 4a4 4 0 00-1.414 7.757L6.343 16.657a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Network
-              </h3>
-              <p className="text-sm text-gray-600">
-                Connect with brilliant minds from across the continent.
-                Students, professionals, researchers. They will all be here.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-red-500 rounded-t-xl" />
-              <div className="mb-4">
-                <svg
-                  className="w-12 h-12 text-gray-500 mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 20l9-5-9-5-9 5 9 5z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 12V4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Learn New Things
-              </h3>
-              <p className="text-sm text-gray-600">
-                From AI ethics to computer vision, you will leave knowing way
-                more than you came with.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
-              <div className="mb-4">
-                <svg
-                  className="w-12 h-12 text-gray-500 mx-auto"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Become Inspired
-              </h3>
-              <p className="text-sm text-gray-600">
-                Hear from thought leaders who are shaping Africa’s AI future.
-                Their journeys might just kickstart yours.
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-12 text-lg font-medium text-gray-800">
-            So what are you waiting for?{" "}
-            <span className="text-red-600 font-bold">Mark your calendar</span>,
-            grab your spot, and come join the AI movement!
-          </p>
-        </div>
-      </section>
-
-      {/* Invitation and countdown */}
-      <section className="bg-gray-100 py-16 px-6">
-        <div className="max-w-5xl mx-auto text-center">
-          <CountdownTimer targetDate="2025-07-01T00:00:00" />
-          <p className="text-xl text-gray-700 mb-6 leading-relaxed max-w-3xl mx-auto">
-            We’re just days away from an unforgettable gathering of innovators,
-            researchers, and students passionate about AI in Africa. Mark your
-            calendar and get ready to be inspired!
-          </p>
-        </div>
-      </section>
-
       <UpcomingEvents />
 
       <ScheduleHighlights />
@@ -256,57 +158,7 @@ export default function Home() {
       {/* Organising Team */}
       <OrganisingTeam />
 
-      {/* Testimonials */}
-      <section className="bg-gray-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-12">
-            What People Are Saying
-          </h2>
-
-          <div className="flex flex-wrap justify-center gap-8">
-            {testimonials.map((t, index) => (
-              <div
-                key={index}
-                className="bg-white max-w-xs w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
-              >
-                <div className="text-5xl text-green-500 mb-4">“</div>
-
-                <p className="italic text-gray-700 mb-4">"{t.quote}"</p>
-
-                <div className="w-16 h-16 mb-2 rounded-full bg-gray-200 overflow-hidden">
-                  {t.image ? (
-                    <img
-                      src={t.image}
-                      alt={t.name}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex items-center justify-center h-full text-gray-400">
-                      <svg
-                        className="w-8 h-8"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="1.5"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                        />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-
-                <p className="font-semibold text-gray-900">{t.name}</p>
-                <p className="text-xs text-gray-500">{t.role}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <Testimonials />
       {/* Call to Action */}
       <section className="bg-blue-50 py-16 text-center">
         <h2 className="text-3xl font-bold mb-4">Want to Get Involved?</h2>
