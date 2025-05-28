@@ -2,15 +2,8 @@ import { Link } from "react-router-dom";
 import CountdownTimer from "../components/CountdownTimer";
 import UpcomingEvents from "../components/UpcomingEvents";
 import OrganisingTeam from "../components/OrganisingTeam";
-
-// Place holder schedule
-const schedule = [
-  { time: "09:00 AM", event: "Opening Ceremony" },
-  { time: "10:00 AM", event: "Keynote: AI in Africa" },
-  { time: "12:00 PM", event: "Panel: Future of ML in Central Africa" },
-  { time: "02:00 PM", event: "Hands-on Workshop: ML Tools" },
-  { time: "04:00 PM", event: "Student Lightning Talks & Networking" },
-];
+import ScheduleHighlights from "../components/ScheduleHighlights";
+import SiteHero from "../components/SiteHero";
 // Place holder testimonials
 const testimonials = [
   {
@@ -61,32 +54,7 @@ export default function Home() {
   return (
     <main className="font-sans text-gray-800 ">
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center text-white text-center py-65 px-4 sm:px-8 md:px-20"
-        style={{ backgroundImage: "url('/hero12.jpg')" }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold">
-            IndabaX Equatorial Guinea
-          </h1>
-          <p className="text-lg md:text-2xl">
-            IndabaX Equatorial Guinea is a local chapter of the Deep Learning
-            Indaba movement. We bring together researchers, students, and AI
-            enthusiasts to share knowledge and build community. Empowering the
-            future of machine learning across Africa, one conversation at a
-            time.
-          </p>
-          <p className="text-lg md:text-2xl">Do not miss the next event: </p>
-          <Link
-            to="/registration"
-            className="bg-red-600 hover:bg-green-700 text-white font-bold py-6 px-6 rounded-md transition"
-          >
-            Register Now
-          </Link>
-        </div>
-      </section>
-
+      <SiteHero />
       {/* About Section */}
       <section className="bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
@@ -283,40 +251,7 @@ export default function Home() {
 
       <UpcomingEvents />
 
-      {/* Schedule Highlights */}
-      <section className="bg-gray-100 py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12 text-gray-800">
-            Schedule Highlights
-          </h2>
-          <div className="space-y-12">
-            {schedule.map((item, index) => (
-              <div
-                key={index}
-                className={`flex flex-col md:flex-row items-center ${
-                  index % 2 !== 0 ? "md:flex-row-reverse" : ""
-                } md:gap-8`}
-              >
-                {/* Time Block */}
-                <div className="bg-white shadow-md rounded-lg px-6 py-4 w-full md:w-1/2 text-center md:text-right">
-                  <p className="text-sm text-gray-500 mb-1">Time</p>
-                  <p className="text-lg font-semibold text-green-600">
-                    {item.time}
-                  </p>
-                </div>
-
-                {/* Event Block */}
-                <div className="w-full md:w-1/2 mt-4 md:mt-0 text-center md:text-left">
-                  <p className="text-sm text-gray-500 mb-1">Event</p>
-                  <p className="text-xl font-medium text-gray-800">
-                    {item.event}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ScheduleHighlights />
 
       {/* Organising Team */}
       <OrganisingTeam />
