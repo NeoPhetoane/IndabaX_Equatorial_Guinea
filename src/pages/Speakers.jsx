@@ -1,72 +1,8 @@
-const speakers = [
-  {
-    name: "Dr. María Esono",
-    title: "AI Researcher",
-    img: "/speaker1placeholder.jpg",
-    talkTitle: "Harnessing AI for Health in Africa",
-    description:
-      "Exploring how AI-driven diagnostics can transform healthcare access.",
-  },
-  {
-    name: "Carlos Mba",
-    title: "ML Engineer",
-    img: "/speaker2placeholder.jpg",
-    talkTitle: "Building Scalable ML Systems",
-    description: "A deep dive into deploying machine learning at scale.",
-  },
-  {
-    name: "Lucía Nguema",
-    title: "Data Scientist",
-    img: "/speaker3placeholder.jpg",
-    talkTitle: "Data for Development",
-    description: "How data science can support sustainable development goals.",
-  },
-  {
-    name: "Pedro Abeso",
-    title: "Robotics Expert",
-    img: "/speaker4placeholder.jpg",
-    talkTitle: "Robotics in Agriculture",
-    description:
-      "Bringing automation to small-scale farms in Equatorial Guinea.",
-  },
-  {
-    name: "Daniela C.",
-    title: "AI Policy Analyst",
-    img: "/speaker5placeholder.jpg",
-    talkTitle: "Ethics and AI Governance",
-    description: "Navigating ethical AI deployment in African contexts.",
-  },
-  {
-    name: "Francisco E.",
-    title: "ML Intern",
-    img: "/speaker6placeholder.jpg",
-    talkTitle: "Getting Started with AI",
-    description: "Lessons from an early-career journey into machine learning.",
-  },
-  {
-    name: "Alicia B.",
-    title: "Software Engineer",
-    img: "/speaker7placeholder.jpg",
-    talkTitle: "AI in Everyday Apps",
-    description: "Integrating AI features into consumer tech products.",
-  },
-  {
-    name: "Miguel T.",
-    title: "Graduate Student",
-    img: "/speaker8placeholder.jpg",
-    talkTitle: "Research in NLP",
-    description: "Advancing African languages in natural language processing.",
-  },
-  {
-    name: "Judith N.",
-    title: "Research Assistant",
-    img: "/speaker9placeholder.jpg",
-    talkTitle: "Youth in AI Research",
-    description: "The role of young minds in shaping Africa’s AI future.",
-  },
-];
+import eventsData from "../data/eventsData";
 
 export default function Speakers() {
+  // Flatten all speakers from all events into a single array
+  const speakers = eventsData.flatMap((event) => event.speakers || []);
   return (
     <main className="font-sans text-gray-800">
       {/* Hero banner for Speaker page */}
