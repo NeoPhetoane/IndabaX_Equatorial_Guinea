@@ -49,11 +49,18 @@ export default function Events() {
                 <p className="text-sm text-gray-500">
                   <strong>Organizer:</strong> {event.organizer}
                 </p>
-                <Link to="/registration">
-                  <button className="mt-4 inline-block px-5 py-2 rounded-full bg-green-700 text-white font-medium hover:bg-red-500 transition-colors duration-300">
-                    Register
-                  </button>
-                </Link>
+                <div className="mt-4 flex space-x-3">
+                  <Link to={`/events/${event.id}/speakers`}>
+                    <button className="px-4 py-2 rounded-full bg-lime-600 text-white font-medium hover:bg-blue-800 transition-colors duration-300">
+                      Speakers
+                    </button>
+                  </Link>
+                  <Link to={`/events/${event.id}/schedule`}>
+                    <button className="px-4 py-2 rounded-full bg-green-600 text-white font-medium hover:bg-green-800 transition-colors duration-300">
+                      Schedule
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
