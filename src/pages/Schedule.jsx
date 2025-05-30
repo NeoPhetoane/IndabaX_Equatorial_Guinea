@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import eventsData from "../data/eventsData";
 
 export default function Schedule() {
-  const schedule = eventsData.flatMap((event) => event.schedule || []);
+  const { eventId } = useParams();
+  const event = eventsData.find((e) => String(e.id) === eventId);
+  // const schedule = eventsData.flatMap((event) => event.schedule || []);
   return (
     <main className="font-sans text-gray-800">
       {/* Hero Banner */}
@@ -19,7 +21,7 @@ export default function Schedule() {
       {/* Schedule Section */}
       <section className="bg-gradient-to-tr from-green-100 via-white to-gray-50 py-16 px-6">
         <div className="max-w-3xl mx-auto space-y-6">
-          {schedule.map((day, index) => (
+          {event.schedule.map((day, index) => (
             <div
               key={index}
               className="relative bg-white rounded-lg shadow-md px-8 py-6 flex items-center"
