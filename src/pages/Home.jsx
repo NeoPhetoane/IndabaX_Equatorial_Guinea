@@ -7,6 +7,7 @@ import Hero2025 from "../components/Hero2025";
 import { PinIcon, BrainIcon, LucideLightbulb } from "lucide-react";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
+import Sponsors from "../components/Sponsors";
 
 export default function Home() {
   return (
@@ -158,6 +159,7 @@ export default function Home() {
       {/* Organising Team */}
       <OrganisingTeam />
       <Testimonials />
+      <Sponsors />
       <CallToAction />
     </main>
   );
