@@ -1,10 +1,39 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Carousel({ cards }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
+  // Initialize visibleCount based on screen size
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2); // Tablet
+      } else {
+        setVisibleCount(3); // Desktop
+      }
+    };
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      if (window.innerWidth < 640) {
+        setVisibleCount(1); // Mobile
+      } else if (window.innerWidth < 1024) {
+        setVisibleCount(2); // Tablet
+      } else {
+        setVisibleCount(3); // Desktop
+      }
+    };
+    updateVisibleCount();
+    window.addEventListener("resize", updateVisibleCount);
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
 
-  const visibleCount = 3;
   const hasMultipleCards = cards.length > 1;
 
   // Calculate the indices of the visible cards
@@ -26,8 +55,10 @@ export default function Carousel({ cards }) {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
   };
 
-  // For pagination dots, show one dot per card
   const handleDotClick = (idx) => setCurrentIndex(idx);
+
+  // Card width based on visibleCount
+  const cardWidth = `${100 / visibleCount}%`;
 
   return (
     <div className="relative w-full h-64 overflow-hidden">
@@ -35,7 +66,8 @@ export default function Carousel({ cards }) {
         {getVisibleCards().map((card, idx) => (
           <div
             key={idx}
-            className="flex-1 h-full flex items-center justify-center"
+            className="h-full flex items-center justify-center"
+            style={{ flex: `0 0 ${cardWidth}` }}
           >
             {card}
           </div>
