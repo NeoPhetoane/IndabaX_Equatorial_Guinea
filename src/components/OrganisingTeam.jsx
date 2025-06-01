@@ -46,27 +46,30 @@ export default function OrganisingTeam() {
     },
   ];
 
+  // Create card elements for the carousel
+  const teamCards = team.map((member) => (
+    <div
+      key={member.name}
+      className="rounded-2xl p-6 text-center border border-gray-200 bg-white mx-2"
+    >
+      <img
+        src={member.img}
+        alt={member.name}
+        className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
+      />
+      <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
+      <p className="text-sm text-green-500 font-semibold mb-2">{member.role}</p>
+      <p className="text-sm text-gray-700">{member.bio}</p>
+    </div>
+  ));
+
   return (
     <main className="bg-gradient-to-b from-white to-gray-100 py-16 px-4">
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
         Meet the Organizing Team
       </h2>
-
       <div className="relative max-w-6xl mx-auto group">
-        {team.map((member) => (
-          <div className="rounded-2xl p-6 text-center border border-gray-200">
-            <img
-              src={member.img}
-              alt={member.name}
-              className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
-            />
-            <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
-            <p className="text-sm text-green-500 font-semibold mb-2">
-              {member.role}
-            </p>
-            <p className="text-sm text-gray-700">{member.bio}</p>
-          </div>
-        ))}
+        <Carousel cards={teamCards} />
       </div>
     </main>
   );
