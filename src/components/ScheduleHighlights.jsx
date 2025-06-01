@@ -2,94 +2,96 @@ import { Clock } from "lucide-react";
 
 const schedule = [
   {
-    time: "09:00 - 09:30",
-    title: "Registration & Welcome",
-    description: "Sign-in, collect materials, and settle in for the day.",
-    highlight: true,
-  },
-  {
-    time: "09:30 - 10:15",
-    title: "Opening Keynote",
-    description: "Insights from a leading AI researcher in Africa.",
-    highlight: true,
-  },
-  {
-    time: "10:30 - 12:00",
-    title: "Workshop: Intro to Deep Learning",
-    description: "Hands-on coding session for beginners and intermediates.",
-    highlight: false,
-  },
-  {
-    time: "12:00 - 13:00",
-    title: "Lunch Break",
+    time: "09:00 - 09:45",
+    title: "Opening Keynote: The Future of AGI – Beyond Hype",
     description:
-      "Network with other participants while enjoying local cuisine.",
-    highlight: false,
-  },
-  {
-    time: "13:00 - 14:30",
-    title: "Panel Discussion: AI in Africa",
-    description: "Industry leaders discuss the future of AI in the region.",
+      "An visionary address on the roadmap and real-world implications of Artificial General Intelligence.",
     highlight: true,
   },
   {
-    time: "14:45 - 16:00",
-    title: "Poster & Demo Session",
-    description: "Showcasing student projects and community research.",
+    time: "10:15 - 11:00",
+    title: "Revolutionizing Industries with Generative AI",
+    description:
+      "Explore how large language models and generative AI are transforming creative, business, and scientific fields.",
     highlight: false,
+  },
+  {
+    time: "11:30 - 12:30",
+    title: "Hands-on Workshop: Building Your First AI Model in 60 Mins",
+    description:
+      "A practical session for beginners, guided through creating a simple machine learning model.",
+    highlight: true,
+  },
+  {
+    time: "12:30 - 13:45",
+    title: "Networking Lunch & AI Startup Showcase",
+    description:
+      "Enjoy a catered lunch while exploring innovative solutions from emerging AI startups.",
+    highlight: false,
+  },
+  {
+    time: "14:15 - 15:00",
+    title: "Panel Discussion: Ethical AI – Navigating Bias & Responsibility",
+    description:
+      "Leading experts debate the critical challenges and best practices for developing ethical and fair AI systems.",
+    highlight: true,
+  },
+  {
+    time: "15:30 - 16:30",
+    title: "Interactive Demo: Robotics & Autonomous Systems Live",
+    description:
+      "Witness live demonstrations of cutting-edge robotics and autonomous AI systems in action.",
+    highlight: false,
+  },
+  {
+    time: "16:45 - 17:30",
+    title: "Closing Remarks & AI Innovations Pitch Competition",
+    description:
+      "Concluding thoughts, followed by a thrilling pitch competition showcasing the next big AI ideas.",
+    highlight: true,
   },
 ];
 
 export default function ScheduleHighlights() {
   return (
-    <section id="schedule" className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
+    <section id="schedule" className="bg-gray-50 py-24 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
           Schedule Highlights
         </h2>
         <p className="text-center text-gray-600 mb-10">
-          Timetable with key moments marked in green.
+          Explore key moments in our event schedule.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 text-left border border-gray-200 rounded-lg overflow-hidden">
-          {/* Table Header */}
-          <div className="bg-gray-100 text-gray-600 font-semibold py-3 px-4">
-            Time
-          </div>
-          <div className="bg-gray-100 text-gray-600 font-semibold py-3 px-4 col-span-2">
-            Session
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 grid-rows-3 w-full max-w-5xl mx-auto border border-gray-200 rounded-xl overflow-hidden">
+          {Array.from({ length: 15 }).map((_, idx) => {
+            // Only fill every other cell with schedule data
+            const scheduleIdx = Math.floor(idx / 2);
+            const showItem = idx % 2 === 0 && schedule[scheduleIdx];
+            const isHighlighted = idx % 2 === 0;
 
-          {/* Table Rows */}
-          {schedule.map((item, index) => (
-            <>
+            return (
               <div
-                key={`time-${index}`}
-                className={`py-4 px-4 border-t border-gray-200 flex items-center ${
-                  item.highlight
-                    ? "bg-green-100 text-green-800 font-semibold"
-                    : "bg-white"
-                }`}
+                key={idx}
+                className={`flex flex-col items-center justify-center aspect-square border-b border-r border-gray-200
+                  ${isHighlighted && showItem ? "bg-green-50" : "bg-white"}
+                  ${idx % 5 === 3 ? "border-r-0" : ""}
+                  ${idx >= 10 ? "border-b-0" : ""}
+                  transition`}
               >
-                <Clock className="w-4 h-4 mr-2" />
-                {item.time}
+                {showItem ? (
+                  <div className="text-center px-2">
+                    <div className="text-base font-semibold text-gray-800">
+                      {schedule[scheduleIdx].title}
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      {schedule[scheduleIdx].time}
+                    </div>
+                  </div>
+                ) : null}
               </div>
-
-              <div
-                key={`title-${index}`}
-                className={`py-4 px-4 border-t border-gray-200 col-span-2 ${
-                  item.highlight
-                    ? "bg-green-100 text-green-800 font-semibold"
-                    : "bg-white"
-                }`}
-              >
-                <div className="text-lg">{item.title}</div>
-                <div className="text-sm text-gray-600 mt-1">
-                  {item.highlight ? null : item.description}
-                </div>
-              </div>
-            </>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
