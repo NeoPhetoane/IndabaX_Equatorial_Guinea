@@ -88,7 +88,9 @@ export default function Home() {
           </p>
         </div>
       </section>
-
+      <ScheduleHighlights />
+      {/* Organising Team */}
+      <OrganisingTeam />
       {/* About Section */}
       <section className="bg-gray-50 py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
@@ -154,10 +156,6 @@ export default function Home() {
 
       <UpcomingEvents />
 
-      <ScheduleHighlights />
-
-      {/* Organising Team */}
-      <OrganisingTeam />
       <Testimonials />
       <Sponsors />
       <CallToAction />
