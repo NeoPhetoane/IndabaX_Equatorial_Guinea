@@ -2,7 +2,7 @@ export default function Sponsors() {
   const sponsors = [
     {
       name: "Deep Learning Indaba",
-      logo: "/logo.png",
+      logo: "/deeplearningindaba.png",
     },
     {
       name: "National University of Equatorial Guinea",
@@ -13,8 +13,8 @@ export default function Sponsors() {
       logo: "/InstaDeep.jpg",
     },
     {
-      name: "Biofit",
-      logo: "/sponsors/biofit.png",
+      name: "AI Expo Africa",
+      logo: "/ai_expo_2023.png",
     },
     {
       name: "DanceMedia Events Calendar",
