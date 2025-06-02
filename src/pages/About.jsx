@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OrganisingTeam from "../components/OrganisingTeam";
 import { HeartHandshake, HandshakeIcon, LucideShrub } from "lucide-react";
+import FAQ from "../components/FAQ";
+
 export default function About() {
   return (
     <main className="font-sans text-gray-800">
@@ -98,6 +100,7 @@ export default function About() {
       </section>
 
       <OrganisingTeam />
+      <FAQ />
 
       {/* Call to Action */}
       <section className="bg-blue-50 py-16 text-center">
