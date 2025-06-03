@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import OrganisingTeam from "../components/OrganisingTeam";
 import { HeartHandshake, HandshakeIcon, LucideShrub } from "lucide-react";
 import FAQ from "../components/FAQ";
+import Statistics from "../components/Statistics";
 
 export default function About() {
   return (
@@ -98,6 +99,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <Statistics />
 
       <OrganisingTeam />
       <FAQ />
