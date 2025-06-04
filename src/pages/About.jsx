@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import OrganisingTeam from "../components/OrganisingTeam";
+import { HeartHandshake, HandshakeIcon, LucideShrub } from "lucide-react";
+import FAQ from "../components/FAQ";
 
 export default function About() {
   return (
@@ -47,37 +49,58 @@ export default function About() {
         <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-10">
           At IndabaX Equatorial Guinea, we aim for:
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div className="p-6 border rounded-lg shadow">
-            <h3 className="text-2xl font-semibold mb-2 text-green-700">
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {/* Card 1 */}
+          <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+            <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+            <div className="mb-4">
+              <HeartHandshake className="text-green-600 items-center" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Inclusivity
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm text-gray-600">
               We strive to create opportunities for everyone to learn and grow,
               regardless of background.
             </p>
           </div>
-          <div className="p-6 border rounded-lg shadow">
-            <h3 className="text-2xl font-semibold mb-2 text-blue-700">
+
+          {/* Card 2 */}
+          <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+            <div className="absolute top-0 left-0 w-full h-2 bg-red-500 rounded-t-xl" />
+            <div className="mb-4">
+              <HandshakeIcon className="text-green-600 items-center" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Knowledge Sharing
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm text-gray-600">
               Sharing and democratizing access to AI and ML education is central
               to our goals.
             </p>
           </div>
-          <div className="p-6 border rounded-lg shadow">
-            <h3 className="text-2xl font-semibold mb-2 text-red-700">
+
+          {/* Card 3 */}
+          <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
+            <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+            <div className="mb-4">
+              <LucideShrub className="text-green-600 items-center" />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Empowerment
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm text-gray-600">
               We empower local talent by connecting them with resources and
               global leaders in the field.
             </p>
           </div>
         </div>
       </section>
+
       <OrganisingTeam />
+      <FAQ />
 
       {/* Call to Action */}
       <section className="bg-blue-50 py-16 text-center">

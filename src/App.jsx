@@ -24,6 +24,8 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/events/:eventId/speakers" element={<Speakers />} />
+        <Route path="/events/:eventId/schedule" element={<Schedule />} />
       </Routes>
       <Footer />
     </>

@@ -66,7 +66,7 @@ const CountdownTimer = ({ targetDate }) => {
         <div className="-mt-20 text-gray-900 font-bold text-xl">
           {String(value).padStart(2, "0")}
         </div>
-        <div className="text-xs text-gray-500 mt-2 uppercase">{label}</div>
+        <div className="text-xs text-gray-700 mt-2 uppercase">{label}</div>
       </div>
     );
   };
@@ -76,7 +76,7 @@ const CountdownTimer = ({ targetDate }) => {
       <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
         The CountDown Has Begun
       </h2>
-      <div className="flex justify-center items-center gap-6 p-8 rounded-xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {renderCircle(timeLeft.days || 0, 30, "Days")}
         {renderCircle(timeLeft.hours || 0, 24, "Hours")}
         {renderCircle(timeLeft.minutes || 0, 60, "Minutes")}

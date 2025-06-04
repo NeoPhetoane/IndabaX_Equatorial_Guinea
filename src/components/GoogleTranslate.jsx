@@ -4,35 +4,41 @@ export default function GoogleTranslate() {
   const [language, setLanguage] = useState("");
 
   useEffect(() => {
-    const addScript = () => {
+    if (!window.googleTranslateElementInit) {
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            autoDisplay: false,
+          },
+          "google_translate_element"
+        );
+      };
+    }
+
+    if (!document.querySelector("script[src*='translate_a/element.js']")) {
       const script = document.createElement("script");
       script.src =
         "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
       script.async = true;
       document.body.appendChild(script);
-    };
-
-    window.googleTranslateElementInit = () => {
-      new window.google.translate.TranslateElement(
-        {
-          pageLanguage: "en",
-          autoDisplay: false,
-        },
-        "google_translate_element"
-      );
-    };
-
-    addScript();
+    }
   }, []);
 
   const handleChange = (e) => {
     const newLang = e.target.value;
     setLanguage(newLang);
-    const select = document.querySelector(".goog-te-combo");
-    if (select) {
-      select.value = newLang;
-      select.dispatchEvent(new Event("change"));
-    }
+    // Wait for the Google Translate dropdown to exist
+    const trySetLanguage = () => {
+      const select = document.querySelector(".goog-te-combo");
+      if (select) {
+        select.value = newLang;
+        select.dispatchEvent(new Event("change"));
+      } else {
+        setTimeout(trySetLanguage, 100); // Try again in 100ms
+      }
+    };
+    trySetLanguage();
   };
 
   return (
