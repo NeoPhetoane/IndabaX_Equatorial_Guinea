@@ -4,18 +4,15 @@ import GoogleTranslate from "./GoogleTranslate";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const linkClass = "text-gray-900 hover:text-green-700 transition";
+  const linkClass = "text-gray-900 hover:text-true-blue transition";
 
   return (
-    <header className="sticky top-0 z-50 bg-gray-100 shadow-md">
+    <header className="sticky top-0 z-50 bg-yellow shadow-md">
       <nav className="max-w-7xl mx-auto px-2 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="IndabaX Logo" className="h-8 w-auto" />
-            <span className="text-1xl font-bold text-gray-900">
-              IndabaX - Equatorial Guinea
-            </span>
+            <img src="/logo1.png" alt="IndabaX Logo" className="h-8 w-auto" />
           </div>
         </Link>
 
@@ -26,9 +23,7 @@ const Navbar = () => {
             end
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -39,9 +34,7 @@ const Navbar = () => {
             to="/about"
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -52,9 +45,7 @@ const Navbar = () => {
             to="/speakers"
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -65,9 +56,7 @@ const Navbar = () => {
             to="/schedule"
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -77,9 +66,7 @@ const Navbar = () => {
             to="/events"
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -90,9 +77,7 @@ const Navbar = () => {
             to="/contact"
             className={({ isActive }) =>
               `${linkClass} ${
-                isActive
-                  ? "text-green-600 border-b-2 border-green-600 pb-1"
-                  : ""
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
               }`
             }
           >
@@ -112,7 +97,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-gray-100">
+        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-yellow">
           <Link to="/" className={linkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
