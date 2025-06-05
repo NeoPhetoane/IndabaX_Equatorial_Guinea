@@ -18,7 +18,7 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-green-50 py-16 px-6">
+    <section className="bg-pastel-blue py-16 px-6">
       <h2 className="text-3xl font-bold text-center mb-10">
         Frequently Asked Questions
       </h2>

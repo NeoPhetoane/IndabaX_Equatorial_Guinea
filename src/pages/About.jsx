@@ -15,7 +15,7 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="relative bg-gradient-to-tr from-green-100 via-white to-red-100 py-16 px-6 overflow-hidden text-center">
+      <section className="relative bg-gradient-to-tr from-blue-100 via-white to-yellow-100 py-16 px-6 overflow-hidden text-center">
         {/* <img
           src="/nopicture.jpg"
           // alt="AI Chip"
@@ -55,9 +55,9 @@ export default function About() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-            <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+            <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
             <div className="mb-4">
-              <HeartHandshake className="text-green-600 items-center" />
+              <HeartHandshake className="text-true-yellow items-center" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Inclusivity
@@ -70,9 +70,9 @@ export default function About() {
 
           {/* Card 2 */}
           <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-            <div className="absolute top-0 left-0 w-full h-2 bg-red-500 rounded-t-xl" />
+            <div className="absolute top-0 left-0 w-full h-2 bg-true-yellow rounded-t-xl" />
             <div className="mb-4">
-              <HandshakeIcon className="text-green-600 items-center" />
+              <HandshakeIcon className="text-true-yellow items-center" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Knowledge Sharing
@@ -85,9 +85,9 @@ export default function About() {
 
           {/* Card 3 */}
           <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-            <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+            <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
             <div className="mb-4">
-              <LucideShrub className="text-green-600 items-center" />
+              <LucideShrub className="text-true-yellow items-center" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Empowerment

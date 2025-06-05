@@ -27,7 +27,7 @@ export default function Sponsors() {
   ];
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section className="bg-true-yellow py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-4">
           Our Sponsors & Partners
@@ -41,7 +41,7 @@ export default function Sponsors() {
             {[...sponsors, ...sponsors].map((sponsor, index) => (
               <div
                 key={index}
-                className="bg-gray-50 border border-gray-200 p-4 rounded-lg shadow-sm hover:shadow-md transition"
+                className="bg-gray-50 border border-blue p-4 rounded-lg shadow-sm hover:shadow-md transition"
               >
                 <img
                   src={sponsor.logo}

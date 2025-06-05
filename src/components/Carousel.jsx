@@ -61,7 +61,7 @@ export default function Carousel({ cards }) {
   const cardWidth = `${100 / visibleCount}%`;
 
   return (
-    <div className="relative w-full h-64 overflow-hidden">
+    <div className="relative w-full h-100 overflow-hidden">
       <div className="w-full h-full flex items-center justify-center gap-4">
         {getVisibleCards().map((card, idx) => (
           <div
@@ -95,7 +95,7 @@ export default function Carousel({ cards }) {
       )}
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+      <div className="absolute bottom-1 left-1/2 -translate-x-1/2 flex gap-2">
         {cards.map((_, idx) => (
           <button
             key={idx}

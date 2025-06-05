@@ -59,12 +59,16 @@
   color: var(--color-primary);
 }
 
-.text-yellow {
+.text-true-yellow {
   color: var(--color-secondary);
 }
 
 .hover\:text-true-blue:hover {
   color: var(--color-primary);
+}
+
+.hover\:text-yellow:hover {
+  color: var(--color-accent);
 }
 
 .border-blue {

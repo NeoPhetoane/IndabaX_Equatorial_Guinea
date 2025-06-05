@@ -52,7 +52,7 @@ const eventsData = [
 
 export default function UpcomingEvents() {
   return (
-    <section className="py-20 px-6">
+    <section className="py-20 px-6 bg-blue-150">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
           Upcoming Events
@@ -70,7 +70,7 @@ export default function UpcomingEvents() {
               style={{
                 backgroundImage: `url(${event.image})`,
                 backgroundBlendMode: "overlay",
-                backgroundColor: "rgba(0,0,0,0.6)",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
               }}
             >
               <div

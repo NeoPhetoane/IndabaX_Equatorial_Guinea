@@ -52,7 +52,7 @@ export default function Testimonials() {
       key={index}
       className="bg-white max-w-xs w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
     >
-      <div className="text-5xl text-green-500 mb-4">“</div>
+      <div className="text-5xl text-true-blue mb-4">“</div>
 
       <p className="italic text-gray-700 mb-4">"{t.quote}"</p>
 

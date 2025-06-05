@@ -48,7 +48,7 @@ const Counter = ({ target, label }) => {
   }, [target]);
   return (
     <div ref={containerRef} className="text-center p-4">
-      <div className="text-4xl font-bold text-green-700">{count}+</div>
+      <div className="text-4xl font-bold text-true-blue">{count}+</div>
       <p className="text-gray-700 mt-2">{label}</p>
     </div>
   );
@@ -56,8 +56,8 @@ const Counter = ({ target, label }) => {
 
 const Statistics = () => {
   return (
-    <section className="bg-white py-16 px-6 text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Impact</h2>
+    <section className="bg-yellow py-16 px-6 text-center">
+      <h2 className="text-3xl font-bold text-true-blue mb-10">Our Impact</h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
         <Counter target={500} label="Participants Reached" />
         <Counter target={30} label="Workshops Held" />

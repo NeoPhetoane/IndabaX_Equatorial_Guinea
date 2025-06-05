@@ -83,8 +83,10 @@ export default function Home() {
 
           <p className="mt-12 text-lg font-medium text-gray-800">
             So what are you waiting for?{" "}
-            <span className="text-yellow font-bold">Mark your calendar</span>,
-            grab your spot, and come join the AI movement!
+            <span className="text-true-yellow font-bold">
+              Mark your calendar
+            </span>
+            , grab your spot, and come join the AI movement!
           </p>
         </div>
       </section>
