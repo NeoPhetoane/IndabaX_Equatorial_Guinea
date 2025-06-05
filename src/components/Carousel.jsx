@@ -78,7 +78,7 @@ export default function Carousel({ cards }) {
       {hasMultipleCards && (
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-true-yellow p-2 rounded-full shadow"
         >
           <ChevronLeft />
         </button>
@@ -88,7 +88,7 @@ export default function Carousel({ cards }) {
       {hasMultipleCards && (
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-true-yellow p-2 rounded-full shadow"
         >
           <ChevronRight />
         </button>
@@ -101,7 +101,7 @@ export default function Carousel({ cards }) {
             key={idx}
             onClick={() => handleDotClick(idx)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              idx === currentIndex ? "bg-green-600" : "bg-gray-300"
+              idx === currentIndex ? "bg-true-yellow" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />

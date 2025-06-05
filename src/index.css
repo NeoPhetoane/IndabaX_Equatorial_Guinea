@@ -31,7 +31,7 @@
   --color-accent: #ffff70; /* lighter yellow*/
   --color-background: #fefecc; /* Pastel Yellow */
   --color-text: #2d3748; /* Dark Text */
-  --color-link: rgb(167, 167, 250); /* Blue Link */
+  --color-link: #d9d8fe; /* Blue Link */
 }
 
 /* Background utilities */
@@ -44,6 +44,14 @@
 }
 .bg-true-yellow {
   background-color: var(--color-secondary);
+}
+
+.bg-yellow-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-pastel-blue {
+  background-color: var(--color-link);
 }
 
 /* Text utilities */
