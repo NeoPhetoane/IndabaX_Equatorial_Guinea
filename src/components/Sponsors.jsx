@@ -39,10 +39,7 @@ export default function Sponsors() {
         <div className="overflow-hidden">
           <div className="flex animate-scroll-sponsors gap-6 items-center w-max">
             {[...sponsors, ...sponsors].map((sponsor, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 border border-blue p-4 rounded-lg shadow-sm hover:shadow-md transition"
-              >
+              <div key={index}>
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}

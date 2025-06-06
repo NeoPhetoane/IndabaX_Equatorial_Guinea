@@ -119,7 +119,7 @@ export default function Home() {
             {/* Learn More Button */}
             <Link
               to="/about"
-              className="inline-block bg-true-blue hover:bg-true-blue text-white font-semibold py-2 px-5 rounded transition duration-300"
+              className="inline-block bg-true-yellow hover:bg-true-blue text-true-blue font-semibold py-2 px-5 rounded transition duration-300"
             >
               Learn More
             </Link>
