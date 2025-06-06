@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-  const linkClass = "text-green-600 hover:underline";
+  const linkClass = "text-true-blue hover:underline";
   return (
-    <footer className="bg-green-100 text-gray-900 py-6 px-6">
+    <footer className="bg-yellow text-gray-900 py-6 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
         {/* Contact Info */}
         <div>
@@ -79,7 +79,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
-              className="text-green-700 hover:text-green-600 transition"
+              className="text-true-blue hover:text-yellow transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-green-700 hover:text-green-600 transition"
+              className="text-true-blue hover:text-yellow transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-green-700 hover:text-green-600 transition"
+              className="text-true-blue hover:text-yellow transition"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+      <div className="mt-10 border-t border-blue pt-6 text-center text-sm text-gray-400">
         <p>
           &copy; {new Date().getFullYear()} IndabaX Equatorial Guinea. All
           rights reserved.

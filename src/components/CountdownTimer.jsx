@@ -58,8 +58,8 @@ const CountdownTimer = ({ targetDate }) => {
           />
           <defs>
             <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="green" />
-              <stop offset="100%" stopColor="lime" />
+              <stop offset="0%" stopColor="yellow" />
+              <stop offset="100%" stopColor="yellow" />
             </linearGradient>
           </defs>
         </svg>

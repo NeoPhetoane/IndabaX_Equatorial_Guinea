@@ -58,13 +58,16 @@ export default function OrganisingTeam() {
         className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
       />
       <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
-      <p className="text-sm text-green-500 font-semibold mb-2">{member.role}</p>
+      <p className="text-sm text-true-blue font-semibold mb-2">{member.role}</p>
       <p className="text-sm text-gray-700">{member.bio}</p>
     </div>
   ));
 
   return (
-    <main className="bg-gradient-to-b from-white to-gray-100 py-16 px-4">
+    <main
+      className="bg-cover bg-center from-white to-gray-100 py-16 px-4"
+      style={{ backgroundImage: "url('/Background.png')" }}
+    >
       <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
         Meet the Organizing Team
       </h2>

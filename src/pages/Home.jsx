@@ -17,7 +17,7 @@ export default function Home() {
       <Hero2025 />
 
       {/* Why Attend Section */}
-      <section className="bg-gray-100 py-20 px-6">
+      <section className="bg-yellow py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
             Why Should You Attend?
@@ -25,7 +25,7 @@ export default function Home() {
           <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
             Whether you are an AI enthusiast or just curious about what machine
             learning even is,{" "}
-            <span className="text-green-700 font-semibold">
+            <span className="text-true-blue font-semibold">
               IndabaX Equatorial Guinea
             </span>{" "}
             is the place to be. We are combining informative talks, hands-on
@@ -37,9 +37,9 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+              <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
               <div className="mb-4">
-                <PinIcon className="text-green-600 items-center" />
+                <PinIcon className="text-true-blue items-center" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 Network
@@ -52,9 +52,9 @@ export default function Home() {
 
             {/* Card 2 */}
             <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-red-500 rounded-t-xl" />
+              <div className="absolute top-0 left-0 w-full h-2 bg-true-yellow rounded-t-xl" />
               <div className="mb-4">
-                <BrainIcon className="text-green-600 items-center" />
+                <BrainIcon className="text-true-blue items-center" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 Learn New Things
@@ -67,9 +67,9 @@ export default function Home() {
 
             {/* Card 3 */}
             <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-green-600 rounded-t-xl" />
+              <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
               <div className="mb-4">
-                <LucideLightbulb className="text-green-600 items-center" />
+                <LucideLightbulb className="text-true-blue items-center" />
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
                 Become Inspired
@@ -83,8 +83,10 @@ export default function Home() {
 
           <p className="mt-12 text-lg font-medium text-gray-800">
             So what are you waiting for?{" "}
-            <span className="text-red-600 font-bold">Mark your calendar</span>,
-            grab your spot, and come join the AI movement!
+            <span className="text-true-yellow font-bold">
+              Mark your calendar
+            </span>
+            , grab your spot, and come join the AI movement!
           </p>
         </div>
       </section>
@@ -92,13 +94,13 @@ export default function Home() {
       {/* Organising Team */}
       <OrganisingTeam />
       {/* About Section */}
-      <section className="bg-gray-50 py-12 px-4">
+      <section className="bg-yellow py-12 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
           {/* Text Content */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
               About{" "}
-              <span className="text-green-600">IndabaX Equatorial Guinea</span>
+              <span className="text-true-blue">IndabaX Equatorial Guinea</span>
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed">
               IndabaX Equatorial Guinea is a local chapter of the Deep Learning
@@ -117,7 +119,7 @@ export default function Home() {
             {/* Learn More Button */}
             <Link
               to="/about"
-              className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-5 rounded transition duration-300"
+              className="inline-block bg-true-yellow hover:bg-true-blue text-true-blue font-semibold py-2 px-5 rounded transition duration-300"
             >
               Learn More
             </Link>

@@ -23,3 +23,54 @@
 .animate-scroll-sponsors {
   animation: scroll-sponsors 30s linear infinite;
 }
+
+/*Colors*/
+:root {
+  --color-primary: #0073ce; /* Blue */
+  --color-secondary: #ffff00; /* Yellow */
+  --color-accent: #ffff70; /* lighter yellow*/
+  --color-background: #fefecc; /* Pastel Yellow */
+  --color-text: #2d3748; /* Dark Text */
+  --color-link: #b2dffb; /* Blue Link */
+}
+
+/* Background utilities */
+.bg-true-blue {
+  background-color: var(--color-primary);
+}
+
+.bg-yellow {
+  background-color: var(--color-background);
+}
+.bg-true-yellow {
+  background-color: var(--color-secondary);
+}
+
+.bg-yellow-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-pastel-blue {
+  background-color: var(--color-link);
+}
+
+/* Text utilities */
+.text-true-blue {
+  color: var(--color-primary);
+}
+
+.text-true-yellow {
+  color: var(--color-secondary);
+}
+
+.hover\:text-true-blue:hover {
+  color: var(--color-primary);
+}
+
+.hover\:text-yellow:hover {
+  color: var(--color-accent);
+}
+
+.border-blue {
+  border-color: var(--color-primary);
+}
