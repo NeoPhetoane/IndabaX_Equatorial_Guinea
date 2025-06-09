@@ -54,10 +54,7 @@ const schedule = [
 
 export default function ScheduleHighlights() {
   return (
-    <section
-      id="schedule"
-      className="bg-pastel-blue py-24 px-4 sm:px-6 lg:px-8"
-    >
+    <section id="schedule" className="bg-yellow py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
           Schedule Highlights
@@ -77,11 +74,7 @@ export default function ScheduleHighlights() {
               <div
                 key={idx}
                 className={`flex flex-col items-center justify-center aspect-square border-b border-r border-gray-200
-                  ${
-                    isHighlighted && showItem
-                      ? "bg-true-yellow"
-                      : "bg-pastel-blue"
-                  }
+                  ${isHighlighted && showItem ? "bg-true-blue" : "bg-yellow"}
                   ${idx % 5 === 3 ? "border-r-0" : ""}
                   ${idx >= 10 ? "border-b-0" : ""}
                   transition`}

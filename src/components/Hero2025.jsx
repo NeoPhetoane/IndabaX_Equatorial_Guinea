@@ -14,7 +14,7 @@ export default function Hero2025() {
         py-65 px-4 sm:px-8 md:px-20 transition-all duration-1000 ease-out transform 
         ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
         bg-green-500`}
-      style={{ backgroundImage: "url('/Background.png')" }}
+      style={{ backgroundImage: "url('/bg.png')" }}
     >
       {/* <div
         className="top-0 h-screen w-full bg-green-500 text-white flex

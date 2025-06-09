@@ -11,7 +11,7 @@ import Sponsors from "../components/Sponsors";
 
 export default function Home() {
   return (
-    <main className="font-sans text-gray-800 ">
+    <main className="font-[Jost] text-gray-800 ">
       {/* Hero Section */}
       <SiteHero />
       <Hero2025 />
@@ -119,7 +119,7 @@ export default function Home() {
             {/* Learn More Button */}
             <Link
               to="/about"
-              className="inline-block bg-true-yellow hover:bg-true-blue text-true-blue font-semibold py-2 px-5 rounded transition duration-300"
+              className="inline-block bg-true-blue hover:bg-true-blue text-true-yellow font-semibold py-2 px-5 rounded transition duration-300"
             >
               Learn More
             </Link>
