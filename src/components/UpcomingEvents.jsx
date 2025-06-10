@@ -9,17 +9,18 @@ export default function UpcomingEvents() {
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Upcoming Events
         </h2>
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+        <p className="mt-4 text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
           Don't miss out on the exciting events lined up. Mark your calendar and
           join us!
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {eventsData.slice(0, 3).map((event) => (
-            <div
+            <Link
+              to={`/events/${event.id}`}
               key={event.id}
               className="group relative bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden border border-gray-200"
             >
@@ -51,12 +52,12 @@ export default function UpcomingEvents() {
                   <strong>Organizer:</strong> {event.organizer}
                 </p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
         <Link
           to="/events"
-          className="inline-block mt-10 bg-true-blue text-true-yellow hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"
+          className="inline-block mt-10 bg-true-blue text-white hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"
         >
           See More Events <ArrowUpRight className="inline ml-2" />
         </Link>

@@ -47,32 +47,52 @@ export default function OrganisingTeam() {
   ];
 
   // Create card elements for the carousel
-  const teamCards = team.map((member) => (
-    <div
-      key={member.name}
-      className="rounded-2xl p-6 text-center border border-gray-200 bg-white mx-2"
-    >
-      <img
-        src={member.img}
-        alt={member.name}
-        className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
-      />
-      <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
-      <p className="text-sm text-true-blue font-semibold mb-2">{member.role}</p>
-      <p className="text-sm text-gray-700">{member.bio}</p>
-    </div>
-  ));
+  // const teamCards = team.map((member) => (
+  //   <div
+  //     key={member.name}
+  //     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 rounded-1xl p-6 text-center border border-gray-200 "
+  //   >
+  //     <img
+  //       src={member.img}
+  //       alt={member.name}
+  //       className="w-24 h-24 mx-auto rounded-2xl object-cover shadow-md mb-4"
+  //     />
+  //     <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
+  //     <p className="text-sm text-true-blue font-semibold mb-2">{member.role}</p>
+  //     <p className="text-sm text-gray-700">{member.bio}</p>
+  //   </div>
+  // ));
 
   return (
     <main
-      className="bg-yellow py-16 px-4"
+      className="max-w-7xl mx-auto py-16 text-center"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
-      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+      <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
         Meet the Organizing Team
       </h2>
-      <div className="relative max-w-6xl mx-auto group">
-        <Carousel cards={teamCards} />
+      <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+        Our team is dedicated to making IndabaX Equatorial Guinea a success. We
+        are passionate about AI and committed to fostering a vibrant community.
+      </p>
+      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {team.map((member) => (
+          <div
+            key={member.name}
+            className="flex flex-col items-center justify-between rounded-2xl p-6 text-center border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
+          >
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
+            />
+            <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
+            <p className="text-sm text-true-blue font-semibold mb-2">
+              {member.role}
+            </p>
+            <p className="text-sm text-gray-700">{member.bio}</p>
+          </div>
+        ))}
       </div>
     </main>
   );

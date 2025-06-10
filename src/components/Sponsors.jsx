@@ -27,9 +27,9 @@ export default function Sponsors() {
   ];
 
   return (
-    <section className="bg-true-blue py-16 px-4 sm:px-6 lg:px-8">
+    <section className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-4">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Our Sponsors & Partners
         </h2>
         <p className="text-gray-600 mb-10">
@@ -43,7 +43,7 @@ export default function Sponsors() {
                 <img
                   src={sponsor.logo}
                   alt={sponsor.name}
-                  className="h-16 w-auto mx-auto object-contain"
+                  className="h-20 w-auto mx-auto object-contain"
                 />
               </div>
             ))}

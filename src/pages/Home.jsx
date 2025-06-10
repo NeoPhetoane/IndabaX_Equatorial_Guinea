@@ -2,8 +2,14 @@ import { Link } from "react-router-dom";
 import UpcomingEvents from "../components/UpcomingEvents";
 import OrganisingTeam from "../components/OrganisingTeam";
 import SiteHero from "../components/SiteHero";
-import Hero2025 from "../components/Hero2025";
-import { PinIcon, BrainIcon, LucideLightbulb } from "lucide-react";
+import {
+  PinIcon,
+  BrainIcon,
+  LucideLightbulb,
+  LucideAirplay,
+  Star,
+  Lightbulb,
+} from "lucide-react";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Sponsors from "../components/Sponsors";
@@ -13,18 +19,18 @@ export default function Home() {
     <main className="font-[Jost] text-gray-800 ">
       {/* Hero Section */}
       <SiteHero />
-      <Hero2025 />
 
       {/* Why Attend Section */}
       <section
         className="bg-yellow py-20 px-6"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
+        {/* Heading and Paragraph */}
+        <div className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center">
+          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Why Should You Attend?
           </h2>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
             Whether you are an AI enthusiast or just curious about what machine
             learning even is,{" "}
             <span className="text-true-blue font-semibold">
@@ -35,133 +41,136 @@ export default function Home() {
             piqued.
           </p>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
-              <div className="mb-4">
-                <PinIcon className="text-true-blue items-center" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Network
-              </h3>
-              <p className="text-sm text-gray-600">
-                Connect with brilliant minds from across the continent.
-                Students, professionals, researchers. They will all be here.
-              </p>
+          <div className="flex flex-col md:flex-row items-stretch gap-12 w-full">
+            {/* Left: Image */}
+            <div className="w-full md:w-1/2 flex justify-center items-stretch">
+              <img
+                src="/why.jpg"
+                alt="Why Attend"
+                className="rounded-xl shadow-xl w-full h-full md:h-full md:max-w-none"
+              />
             </div>
 
-            {/* Card 2 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-true-yellow rounded-t-xl" />
-              <div className="mb-4">
-                <BrainIcon className="text-true-blue items-center" />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Learn New Things
-              </h3>
-              <p className="text-sm text-gray-600">
-                From AI ethics to computer vision, you will leave knowing way
-                more than you came with.
-              </p>
-            </div>
+            {/* Right: Benefits List */}
+            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+              <div className="md:w-2/2 px-5 py-4 mt-6 bg-white lg:mt-20 lg:p-16">
+                <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
+                  <div className="flex items-start">
+                    <PinIcon className="text-true-blue w-15 h-15" />
+                    <div className="ml-5">
+                      <h3 className="text-lg font-semibold text-black">
+                        Network
+                      </h3>
+                      <p className="mt-4 text-base text-gray-600">
+                        Connect with brilliant minds from across the continent.
+                        Students, professionals, researchers. They will all be
+                        here.
+                      </p>
+                    </div>
+                  </div>
 
-            {/* Card 3 */}
-            <div className="relative bg-white border border-gray-200 rounded-xl shadow-md px-6 py-8 hover:shadow-lg transition duration-300">
-              <div className="absolute top-0 left-0 w-full h-2 bg-true-blue rounded-t-xl" />
-              <div className="mb-4">
-                <LucideLightbulb className="text-true-blue items-center" />
+                  <div className="flex items-start">
+                    <BrainIcon className="text-true-blue w-15 h-15" />
+                    <div className="ml-5">
+                      <h3 className="text-lg font-semibold text-black">
+                        Learn New Things
+                      </h3>
+                      <p className="mt-4 text-base text-gray-600">
+                        From AI ethics to computer vision, you will leave
+                        knowing way more than you came with.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <Lightbulb className="text-true-blue w-15 h-15" />
+                    <div className="ml-5">
+                      <h3 className="text-lg font-semibold text-black">
+                        Become Inspired
+                      </h3>
+                      <p className="mt-4 text-base text-gray-600">
+                        Hear from thought leaders who are shaping Africa’s AI
+                        future. Their journeys might just kickstart yours.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <Star className="text-true-blue w-15 h-15" />
+                    <div className="ml-5">
+                      <h3 className="text-lg font-semibold text-black">
+                        Showcase Your Work
+                      </h3>
+                      <p className="mt-4 text-base text-gray-600">
+                        Whether you are a student or a professional, this is
+                        your chance to present your projects and get feedback
+                        from experts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                Become Inspired
-              </h3>
-              <p className="text-sm text-gray-600">
-                Hear from thought leaders who are shaping Africa’s AI future.
-                Their journeys might just kickstart yours.
-              </p>
             </div>
           </div>
-
-          <p className="mt-12 text-lg font-medium text-gray-800">
-            So what are you waiting for?{" "}
-            <span className="text-true-blue font-bold">Mark your calendar</span>
-            , grab your spot, and come join the AI movement!
-          </p>
         </div>
       </section>
+
       {/* Organising Team */}
       <OrganisingTeam />
-      {/* About Section */}
-      <section
-        className="py-12 px-4 bg-cover bg-center"
-        style={{ backgroundImage: "url('/Background.png')" }}
-      >
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
-          {/* Text Content */}
-          <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              About{" "}
-              <span className="text-true-yellow">
-                IndabaX Equatorial Guinea
-              </span>
-            </h2>
-            <p className="text-lg text-white leading-relaxed">
-              IndabaX Equatorial Guinea is a local chapter of the Deep Learning
-              Indaba, a pan-African movement to strengthen African AI. Our event
-              offers a unique space for knowledge sharing, community building,
-              and research advancement. It is open to students, professionals,
-              and enthusiasts who want to engage with cutting-edge developments
-              in AI, collaborate with others, and grow their careers through
-              meaningful connections.
-              <br />
-              <br />
-              We aim to advance our resourceful country using Artificial
-              Intelligence and reach unimaginable heights
-            </p>
-            <br />
-            {/* Learn More Button */}
-            <Link
-              to="/about"
-              className="inline-block bg-true-yellow hover:bg-true-blue text-true-blue font-semibold py-2 px-5 rounded transition duration-300"
-            >
-              Learn More
-            </Link>
-          </div>
 
-          {/* Image Grid */}
-          <div className="relative w-full md:w-1/2 min-h-[400px] md:min-h-[500px] md:self-start">
-            <img
-              src="/aboutsec1.jpg"
-              alt="Top Left"
-              className="absolute top-0 left-0 w-32 h-28 md:w-40 md:h-36 object-cover rounded-lg shadow-lg hover:scale-125 transform transition duration-300"
-            />
-            <img
-              src="/aboutsec2.jpg"
-              alt="Top Right"
-              className="absolute top-0 right-0 w-32 h-28 md:w-40 md:h-36 object-cover rounded-lg shadow-lg hover:scale-125 transform transition duration-300"
-            />
-            <img
-              src="/aboutsec3.jpg"
-              alt="Center"
-              className="absolute top-1/2 left-1/2 w-40 h-40 md:w-52 md:h-52 transform -translate-x-1/2 -translate-y-1/2 object-cover rounded-full shadow-xl border-4 border-white hover:scale-125 transition duration-300"
-            />
-            <img
-              src="/aboutsec4.jpg"
-              alt="Bottom Left"
-              className="absolute bottom-0 left-4 w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg shadow-md hover:scale-125 transform transition duration-300"
-            />
-            <img
-              src="/aboutsec5.jpg"
-              alt="Bottom Right"
-              className="absolute bottom-0 right-4 w-28 h-28 md:w-36 md:h-36 object-cover rounded-lg shadow-md hover:scale-125 transform transition duration-300"
-            />
+      {/* About Section */}
+
+      <section className="py-10 bg-white sm:py-16 lg:py-24">
+        <div className="max-w-4xl mx-auto sm:px-6 lg:px-8">
+          <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
+            <div className="pr-12 sm:pr-0">
+              <div className="relative max-w-xs mb-12">
+                <img
+                  className="object-bottom rounded-md"
+                  src="about.jpg"
+                  alt=""
+                />
+
+                <img
+                  className="absolute origin-bottom-right scale-75 rounded-md -bottom-12 -right-12"
+                  src="why2.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+                About IndabaX Equatorial Guinea
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-gray-600">
+                IndabaX Equatorial Guinea is a local chapter of the Deep
+                Learning Indaba, a pan-African movement to strengthen African
+                AI. Our event offers a unique space for knowledge sharing,
+                community building, and research advancement. It is open to
+                students, professionals, and enthusiasts who want to engage with
+                cutting-edge developments in AI, collaborate with others, and
+                grow their careers through meaningful connections.
+                <br />
+                <br />
+                We aim to advance our resourceful country using Artificial
+                Intelligence and reach unimaginable heights
+              </p>
+              {/* Learn More Button */}
+              <div className="mt-6">
+                <Link
+                  to="/about"
+                  className="inline-block bg-true-blue hover:bg-true-blue text-black font-semibold py-2 px-5 rounded transition duration-300"
+                >
+                  Learn More
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <UpcomingEvents />
-
       <Testimonials />
       <Sponsors />
       <CallToAction />

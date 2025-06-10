@@ -84,7 +84,7 @@ export default function Testimonials() {
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-800 mb-12">
+          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             What People Are Saying
           </h2>
           <p className="text-lg text-gray-700 mb-10">
