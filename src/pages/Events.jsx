@@ -11,7 +11,10 @@ import eventsData from "../data/eventsData";
 
 export default function Events() {
   return (
-    <section className="min-h-screen bg-white text-gray-800 px-4 py-16">
+    <section
+      className="min-h-screen bg-white text-gray-800 px-4 py-16"
+      style={{ backgroundImage: "url('/bgwhite.png')" }}
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center">
           Upcoming Events
@@ -51,12 +54,12 @@ export default function Events() {
                 </p>
                 <div className="mt-4 flex space-x-3">
                   <Link to={`/events/${event.id}/speakers`}>
-                    <button className="px-4 py-2 rounded-full bg-lime-600 text-white font-medium hover:bg-blue-800 transition-colors duration-300">
+                    <button className="px-4 py-2 rounded-full bg-true-blue text-white font-medium hover:bg-blue-800 transition-colors duration-300">
                       Speakers
                     </button>
                   </Link>
                   <Link to={`/events/${event.id}/schedule`}>
-                    <button className="px-4 py-2 rounded-full bg-green-600 text-white font-medium hover:bg-green-800 transition-colors duration-300">
+                    <button className="px-4 py-2 rounded-full bg-true-yellow text-white font-medium hover:bg-green-800 transition-colors duration-300">
                       Schedule
                     </button>
                   </Link>
