@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import UpcomingEvents from "../components/UpcomingEvents";
 import OrganisingTeam from "../components/OrganisingTeam";
-import ScheduleHighlights from "../components/ScheduleHighlights";
 import SiteHero from "../components/SiteHero";
 import Hero2025 from "../components/Hero2025";
 import { PinIcon, BrainIcon, LucideLightbulb } from "lucide-react";
@@ -21,7 +20,7 @@ export default function Home() {
         className="bg-yellow py-20 px-6"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
             Why Should You Attend?
           </h2>
@@ -91,7 +90,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <ScheduleHighlights />
       {/* Organising Team */}
       <OrganisingTeam />
       {/* About Section */}
@@ -99,7 +97,7 @@ export default function Home() {
         className="py-12 px-4 bg-cover bg-center"
         style={{ backgroundImage: "url('/Background.png')" }}
       >
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
           {/* Text Content */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
