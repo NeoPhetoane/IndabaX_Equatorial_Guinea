@@ -7,6 +7,7 @@ const schedule = [
     description:
       "An visionary address on the roadmap and real-world implications of Artificial General Intelligence.",
     highlight: true,
+    image: "/hero3.jpg",
   },
   {
     time: "10:15 - 11:00",
@@ -21,6 +22,7 @@ const schedule = [
     description:
       "A practical session for beginners, guided through creating a simple machine learning model.",
     highlight: true,
+    image: "/hero3.jpg",
   },
   {
     time: "12:30 - 13:45",
@@ -28,6 +30,7 @@ const schedule = [
     description:
       "Enjoy a catered lunch while exploring innovative solutions from emerging AI startups.",
     highlight: false,
+    image: "/hero3.jpg",
   },
   {
     time: "14:15 - 15:00",
@@ -35,6 +38,7 @@ const schedule = [
     description:
       "Leading experts debate the critical challenges and best practices for developing ethical and fair AI systems.",
     highlight: true,
+    image: "/hero3.jpg",
   },
   {
     time: "15:30 - 16:30",
@@ -42,6 +46,7 @@ const schedule = [
     description:
       "Witness live demonstrations of cutting-edge robotics and autonomous AI systems in action.",
     highlight: false,
+    image: "/hero3.jpg",
   },
   {
     time: "16:45 - 17:30",
@@ -54,7 +59,11 @@ const schedule = [
 
 export default function ScheduleHighlights() {
   return (
-    <section id="schedule" className="bg-yellow py-24 px-4 sm:px-6 lg:px-8">
+    <section
+      id="schedule"
+      className=" py-24 px-4 sm:px-6 lg:px-8"
+      style={{ backgroundImage: "url('/bgwhite.png')" }}
+    >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-4">
           Schedule Highlights
@@ -67,17 +76,24 @@ export default function ScheduleHighlights() {
           {Array.from({ length: 15 }).map((_, idx) => {
             // Only fill every other cell with schedule data
             const scheduleIdx = Math.floor(idx / 2);
-            const showItem = idx % 2 === 0 && schedule[scheduleIdx];
-            const isHighlighted = idx % 2 === 0;
+            const showItem = idx % 4 === 0 && schedule[scheduleIdx];
+            const isHighlighted = idx % 4 === 0;
+
+            // On small screens, only render cells with content
+            if (!showItem && window.innerWidth < 640) {
+              return null;
+            }
 
             return (
               <div
                 key={idx}
                 className={`flex flex-col items-center justify-center aspect-square border-b border-r border-gray-200
-                  ${isHighlighted && showItem ? "bg-true-blue" : "bg-yellow"}
+                  ${isHighlighted && showItem ? "bg-true-blue" : ""}
                   ${idx % 5 === 3 ? "border-r-0" : ""}
                   ${idx >= 10 ? "border-b-0" : ""}
-                  transition`}
+                  transition
+                   ${!showItem ? "hidden sm:flex" : ""}
+        `}
               >
                 {showItem ? (
                   <div className="text-center px-2">
