@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Registration from "./components/Registration";
 import Events from "./pages/Events";
+import EventDetail from "./components/EventDetail";
 
 function App() {
   return (
@@ -24,8 +25,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/events/:eventId/speakers" element={<Speakers />} />
-        <Route path="/events/:eventId/schedule" element={<Schedule />} />
+        <Route path="/events/:id" element={<EventDetail />} />
       </Routes>
       <Footer />
     </>
