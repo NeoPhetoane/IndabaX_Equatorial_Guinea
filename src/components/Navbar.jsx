@@ -7,7 +7,7 @@ const Navbar = () => {
   const linkClass = "text-gray-900 hover:text-true-blue transition";
 
   return (
-    <header className="sticky top-0 z-50 bg-yellow shadow-md">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
       <nav className="max-w-7xl mx-auto px-2 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
