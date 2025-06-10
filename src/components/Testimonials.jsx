@@ -45,60 +45,52 @@ const testimonials = [
   },
 ];
 
-export default function Testimonials() {
-  // Create the cards array from testimonial data
-  const testimonialCards = testimonials.map((t, index) => (
-    <div
-      key={index}
-      className="bg-white max-w-xs w-full p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 flex flex-col items-center text-center"
-    >
-      <div className="text-5xl text-true-blue mb-4">“</div>
-
-      <p className="italic text-gray-700 mb-4">"{t.quote}"</p>
-
-      <div className="w-16 h-16 mb-2 rounded-full bg-gray-200 overflow-hidden">
-        {t.image ? (
-          <img
-            src={t.image}
-            alt={t.name}
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="flex items-center justify-center h-full text-gray-400">
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-              />
-            </svg>
+function TestimonialCard({ t }) {
+  return (
+    <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div className="md:flex md:items-center md:justify-center md:space-x-14">
+          <div className="relative flex-shrink-0 w-48 h-48 mx-auto md:mx-0 md:mr-8">
+            <div className="absolute w-48 h-48 bg-gray-300 rounded-full -bottom-2 -right-1"></div>
+            <img
+              className="relative object-cover w-48 h-48 rounded-full"
+              src={t.image}
+              alt={t.name}
+            />
           </div>
-        )}
+          <div className="mt-10 md:mt-0 text-center md:text-left md:ml-8">
+            <blockquote>
+              <p className="text-xl text-black">“{t.quote}”</p>
+            </blockquote>
+            <p className="text-lg font-semibold text-black mt-7">{t.name}</p>
+            <p className="mt-1 text-base text-gray-600">{t.role}</p>
+          </div>
+        </div>
       </div>
+    </section>
+  );
+}
 
-      <p className="font-semibold text-gray-900">{t.name}</p>
-      <p className="text-xs text-gray-500">{t.role}</p>
-    </div>
+export default function Testimonials() {
+  // Prepare cards for the Carousel
+  const testimonialCards = testimonials.map((t, idx) => (
+    <TestimonialCard t={t} key={idx} />
   ));
 
   return (
     <main>
       <section
-        className="bg-gray-100 py-20 px-6"
+        className="py-20 px-6"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-gray-800 mb-12">
             What People Are Saying
           </h2>
-
-          {/* Carousel here */}
+          <p className="text-lg text-gray-700 mb-10">
+            Hear from past attendees about their experiences at IndabaX
+            Equatorial Guinea.
+          </p>
           <Carousel cards={testimonialCards} />
         </div>
       </section>
