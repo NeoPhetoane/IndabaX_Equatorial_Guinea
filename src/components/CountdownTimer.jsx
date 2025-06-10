@@ -73,7 +73,7 @@ const CountdownTimer = ({ targetDate }) => {
 
   return (
     <div>
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-true-yellow mb-6">
         The CountDown Has Begun
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

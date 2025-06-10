@@ -17,7 +17,10 @@ export default function Home() {
       <Hero2025 />
 
       {/* Why Attend Section */}
-      <section className="bg-yellow py-20 px-6">
+      <section
+        className="bg-yellow py-20 px-6"
+        style={{ backgroundImage: "url('/bgwhite.png')" }}
+      >
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold mb-6 text-gray-800">
             Why Should You Attend?
@@ -83,9 +86,7 @@ export default function Home() {
 
           <p className="mt-12 text-lg font-medium text-gray-800">
             So what are you waiting for?{" "}
-            <span className="text-true-yellow font-bold">
-              Mark your calendar
-            </span>
+            <span className="text-true-blue font-bold">Mark your calendar</span>
             , grab your spot, and come join the AI movement!
           </p>
         </div>
@@ -94,15 +95,20 @@ export default function Home() {
       {/* Organising Team */}
       <OrganisingTeam />
       {/* About Section */}
-      <section className="bg-yellow py-12 px-4">
+      <section
+        className="py-12 px-4 bg-cover bg-center"
+        style={{ backgroundImage: "url('/Background.png')" }}
+      >
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12 mt-8 md:mt-20">
           {/* Text Content */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-bold mb-4 text-gray-800">
               About{" "}
-              <span className="text-true-blue">IndabaX Equatorial Guinea</span>
+              <span className="text-true-yellow">
+                IndabaX Equatorial Guinea
+              </span>
             </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
+            <p className="text-lg text-white leading-relaxed">
               IndabaX Equatorial Guinea is a local chapter of the Deep Learning
               Indaba, a pan-African movement to strengthen African AI. Our event
               offers a unique space for knowledge sharing, community building,
@@ -119,7 +125,7 @@ export default function Home() {
             {/* Learn More Button */}
             <Link
               to="/about"
-              className="inline-block bg-true-blue hover:bg-true-blue text-true-yellow font-semibold py-2 px-5 rounded transition duration-300"
+              className="inline-block bg-true-yellow hover:bg-true-blue text-true-blue font-semibold py-2 px-5 rounded transition duration-300"
             >
               Learn More
             </Link>
