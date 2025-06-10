@@ -76,6 +76,14 @@ body {
   color: var(--color-accent);
 }
 
+.hover\:bg-true-blue:hover {
+  color: var(--color-primary);
+}
+
+.hover\:bg-yellow:hover {
+  color: var(--color-accent);
+}
+
 .border-blue {
   border-color: var(--color-primary);
 }
