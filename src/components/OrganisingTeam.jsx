@@ -65,10 +65,10 @@ export default function OrganisingTeam() {
 
   return (
     <main
-      className="bg-cover bg-center from-white to-gray-100 py-16 px-4"
-      style={{ backgroundImage: "url('/Background.png')" }}
+      className="bg-yellow py-16 px-4"
+      style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
-      <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
+      <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
         Meet the Organizing Team
       </h2>
       <div className="relative max-w-6xl mx-auto group">

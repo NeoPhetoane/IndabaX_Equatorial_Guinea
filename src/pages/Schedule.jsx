@@ -1,17 +1,19 @@
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import eventsData from "../data/eventsData";
 
 export default function Schedule() {
-  const { eventId } = useParams();
-  const event = eventsData.find((e) => String(e.id) === eventId);
-  // const schedule = eventsData.flatMap((event) => event.schedule || []);
+  // const { eventId } = useParams();
+  // const event = eventsData.find((e) => String(e.id) === eventId);
+  const schedule = eventsData.flatMap((event) => event.schedule || []);
   return (
     <main className="font-sans text-gray-800">
       {/* Hero Banner */}
       <section className="relative bg-[url('/hero8.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold">Event Schedule</h1>
+          <h1 className="text-5xl md:text-6xl font-bold">
+            IndabaX 2025 Event Schedule
+          </h1>
           <p className="mt-4 text-xl md:text-2xl">
             3 Days of Learning, Collaboration & Growth
           </p>
@@ -21,7 +23,7 @@ export default function Schedule() {
       {/* Schedule Section */}
       <section className="bg-gradient-to-tr from-green-100 via-white to-gray-50 py-16 px-6">
         <div className="max-w-3xl mx-auto space-y-6">
-          {event.schedule.map((day, index) => (
+          {schedule.map((day, index) => (
             <div
               key={index}
               className="relative bg-white rounded-lg shadow-md px-8 py-6 flex items-center"

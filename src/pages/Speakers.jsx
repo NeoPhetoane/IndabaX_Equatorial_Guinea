@@ -1,17 +1,17 @@
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 import eventsData from "../data/eventsData";
 
 export default function Speakers() {
   // Flatten all speakers from all events into a single array
-  // const speakers = eventsData.flatMap((event) => event.speakers || []);
-  const { eventId } = useParams();
-  const event = eventsData.find((e) => String(e.id) === eventId);
+  const speakers = eventsData.flatMap((event) => event.speakers || []);
+  // const { eventId } = useParams();
+  // const event = eventsData.find((e) => String(e.id) === eventId);
 
   return (
     <main className="font-sans text-gray-800">
       {/* Hero banner for Speaker page */}
       <section className="bg-[url('/hero7.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold">Speakers</h1>
+        <h1 className="text-5xl md:text-6xl font-bold">2025 Speakers</h1>
         <p className="mt-4 text-xl md:text-2xl">
           Meet the inspiring minds shaping the future of AI in Africa
         </p>
@@ -19,7 +19,7 @@ export default function Speakers() {
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {event.speakers.map((speaker, index) => (
+            {speakers.map((speaker, index) => (
               <div
                 key={index}
                 className="relative bg-gray-50 p-6 rounded-lg shadow hover:shadow-lg transition duration-300 group"

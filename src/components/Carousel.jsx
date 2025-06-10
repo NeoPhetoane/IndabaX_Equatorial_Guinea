@@ -78,7 +78,7 @@ export default function Carousel({ cards }) {
       {hasMultipleCards && (
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-true-yellow p-2 rounded-full shadow"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-true-blue p-2 rounded-full shadow"
         >
           <ChevronLeft />
         </button>
