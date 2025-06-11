@@ -13,6 +13,7 @@ import {
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Sponsors from "../components/Sponsors";
+import Statistics from "../components/Statistics";
 
 export default function Home() {
   return (
@@ -114,13 +115,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Statistics Section */}
+      <Statistics />
+
+      {/* Organising Team Section */}
 
       {/* Organising Team */}
       <OrganisingTeam />
 
       {/* About Section */}
 
-      <section className="py-10 bg-white sm:py-16 lg:py-24">
+      <section className="py-10 sm:py-16 lg:py-24">
         <div className="max-w-4xl mx-auto sm:px-6 lg:px-8">
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
             <div className="pr-12 sm:pr-0">
