@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar1, Locate } from "lucide-react";
+import { ArrowRight, Calendar1, Locate, MoveUpRight } from "lucide-react";
 import CountdownTimer from "./CountdownTimer";
 
 export default function SiteHero() {
@@ -9,40 +9,55 @@ export default function SiteHero() {
         className="relative bg-cover bg-center text-white py-20 px-4 sm:px-8 md:px-20"
         style={{ backgroundImage: "url('/hero.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,0.99) 0%, rgba(0,0,0,0.5) 100%)",
+          }}
+        ></div>
         <div className="relative z-10 max-w-7xl mx-auto flex flex-row items-stretch space-x-6">
           {/* Content */}
           <div className="flex-1 flex flex-col justify-center items-start text-left space-y-6 py-4">
-            <h1 className="text-4xl md:text-6xl font-bold">WELCOME TO</h1>
-            <h1 className="text-4xl md:text-6xl text-true-blue font-bold">
-              INDABAX EQUATORIAL GUINREA
+            <h1 className="text-3xl md:text-5xl font-semibold">Welcome To</h1>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-800 via-white to-yellow-400 bg-clip-text text-transparent">
+              IndabaX Equatorial Guinea
             </h1>
-            <p className="text-lg md:text-2xl">
+            <p className="text-md md:text-xl">
               IndabaX Equatorial Guinea is a local chapter of the Deep Learning
-              Indaba movement. We bring together researchers, students, and AI
-              enthusiasts to share knowledge and build community. Empowering the
-              future of machine learning across Africa, one conversation at a
-              time.
+              Indaba movement.
+              <br></br>We bring together researchers, students, and AI
+              enthusiasts to share knowledge and build community.
+              <br></br>Empowering the future of machine learning across Africa,
+              one conversation at a time.
             </p>
-            <p className="text-lg md:text-2xl">Do not miss the next event: </p>
-
-            <div className="flex items-center gap-2">
-              <Calendar1 className="text-lg md:text-2xl" />
-              <span className="text-lg md:text-2xl">7-19 July 2025</span>
-            </div>
+            <p className="text-2xl md:text-2xl font-semibold">
+              Be sure to not miss the next event:
+            </p>
             <div className="flex items-center gap-2">
               <Locate className="text-lg md:text-2xl" />
               <span className="text-lg md:text-2xl">
                 Malabo, Equatorial Guinea
               </span>
             </div>
+            <div className="flex items-center gap-2">
+              <Calendar1 className="text-lg md:text-2xl" />
+              <span className="text-lg md:text-2xl">7-19 July 2025</span>
+            </div>
+
             <CountdownTimer targetDate="2025-07-01T00:00:00" />
-            <Link
-              to="/registration"
-              className="bg-true-blue hover:bg-blue-800 text-white text-xl font-semibold py-6 px-10 rounded-full transition animate-pulse-slow inline-flex items-center gap-2"
-            >
-              Register Now <ArrowRight className="inline" />
-            </Link>
+            <div className="flex flex-col md:flex-row items-center w-full md:w-auto space-y-4 md:space-y-0 md:space-x-4">
+              <Link to="/about" className="w-full md:w-auto">
+                <button className="w-full md:w-auto flex justify-center items-center gap-2 hover:bg-true-blue text-white border border-white text-base md:text-xl font-semibold py-4 px-6 md:py-6 md:px-10 rounded-full transition animate-pulse-slow">
+                  Learn More <MoveUpRight className="inline" />
+                </button>
+              </Link>
+              <Link to="/registration" className="w-full md:w-auto">
+                <button className="w-full md:w-auto flex justify-center items-center gap-2 bg-true-blue hover:bg-white text-white text-base md:text-xl font-semibold py-4 px-6 md:py-6 md:px-10 rounded-full transition animate-pulse-slow">
+                  Register Now <ArrowRight className="inline" />
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

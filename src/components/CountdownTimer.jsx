@@ -54,10 +54,12 @@ const CountdownTimer = ({ targetDate }) => {
         }`}
         style={{ backgroundColor: color }}
       >
-        <div className="text-2xl sm:text-3xl md:text-4xl font-bold">
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
           {String(value).padStart(2, "0")}
         </div>
-        <div className="text-xs sm:text-sm md:text-base uppercase">{label}</div>
+        <div className="text-xs sm:text-sm md:text-base uppercase text-yellow-400">
+          {label}
+        </div>
       </div>
     );
   };
