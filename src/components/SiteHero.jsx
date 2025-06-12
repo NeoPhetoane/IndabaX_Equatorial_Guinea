@@ -13,13 +13,13 @@ export default function SiteHero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(0,0,0,0.99) 0%, rgba(0,0,0,0.5) 100%)",
+              "linear-gradient(to right, rgba(0,0,0,0.99) 0%, rgba(0,0,0,0.0) 100%)",
           }}
         ></div>
         <div className="relative z-10 max-w-7xl mx-auto flex flex-row items-stretch space-x-6">
           {/* Content */}
           <div className="flex-1 flex flex-col justify-center items-start text-left space-y-6 py-4">
-            <h1 className="text-3xl md:text-5xl font-semibold">Welcome To</h1>
+            <h1 className="text-3xl md:text-5xl font-semibold">Welcome to</h1>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-800 via-white to-yellow-400 bg-clip-text text-transparent">
               IndabaX Equatorial Guinea
             </h1>
@@ -27,11 +27,11 @@ export default function SiteHero() {
               IndabaX Equatorial Guinea is a local chapter of the Deep Learning
               Indaba movement.
               <br></br>We bring together researchers, students, and AI
-              enthusiasts to share knowledge and build community.
-              <br></br>Empowering the future of machine learning across Africa,
+              enthusiasts to share knowledge<br></br> and build community.
+              Empowering the future of <br></br>machine learning across Africa,
               one conversation at a time.
             </p>
-            <p className="text-2xl md:text-2xl font-semibold">
+            <p className="text-2xl md:text-2xl font-semibold text-true-blue">
               Be sure to not miss the next event:
             </p>
             <div className="flex items-center gap-2">
