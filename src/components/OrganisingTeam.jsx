@@ -84,7 +84,7 @@ export default function OrganisingTeam() {
             <img
               src={member.img}
               alt={member.name}
-              className="w-24 h-24 mx-auto rounded-full object-cover shadow-md mb-4"
+              className="w-40 h-40 mx-auto rounded-full object-cover shadow-md mb-4"
             />
             <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
             <p className="text-sm text-true-blue font-semibold mb-2">
