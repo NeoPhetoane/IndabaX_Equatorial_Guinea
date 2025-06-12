@@ -4,6 +4,7 @@ import OrganisingTeam from "../components/OrganisingTeam";
 import { HeartHandshake, HandshakeIcon, LucideShrub } from "lucide-react";
 import FAQ from "../components/FAQ";
 import Statistics from "../components/Statistics";
+import CallToAction from "../components/CallToAction";
 
 export default function About() {
   return (
@@ -154,7 +155,8 @@ export default function About() {
       <FAQ />
 
       {/* Call to Action */}
-      <section className="py-16 px-6 text-center">
+      <CallToAction />
+      {/* <section className="py-16 px-6 text-center">
         <h2 className="text-3xl font-bold mb-4">Want to Get Involved?</h2>
         <p className="text-lg mb-6 text-gray-700">
           Whether you're a student, educator, or professional — join us in
@@ -166,7 +168,7 @@ export default function About() {
         >
           Register Now
         </Link>
-      </section>
+      </section> */}
     </main>
   );
 }

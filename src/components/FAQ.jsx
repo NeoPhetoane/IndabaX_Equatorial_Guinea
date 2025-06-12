@@ -6,7 +6,7 @@ const FAQItem = ({ question, answer }) => {
     <div className="border-b py-4">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full text-left flex justify-between items-center text-lg font-semibold text-gray-800"
+        className="w-full text-left flex justify-between items-center text-lg font-semibold text-true-blue"
       >
         {question}
         <span>{open ? "-" : "+"}</span>
@@ -18,11 +18,21 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-pastel-blue py-16 px-6">
-      <h2 className="text-3xl font-bold text-center mb-10">
-        Frequently Asked Questions
-      </h2>
+    <section className="py-16 px-6 max-w-7xl mx-auto">
+      <div className=" mb-10 w-full flex flex-col items-center px-6">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
+          Here are some common questions about the Deep Learning Indaba and
+          IndabaX. If you have more questions, feel free to reach out to us!
+        </p>
+      </div>
       <div className="max-w-3xl mx-auto">
+        <FAQItem
+          question="What is the Deep Learning Indaba?"
+          answer="The Deep Learning Indaba is a pan-African initiative dedicated to strengthening African machine learning and AI. It brings together researchers, students, and professionals to share knowledge and foster collaboration."
+        />
         <FAQItem
           question="What is IndabaX?"
           answer="IndabaX is a locally organized chapter of the Deep Learning Indaba. It's a community event aimed at strengthening African AI."
