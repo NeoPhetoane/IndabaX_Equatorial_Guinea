@@ -65,7 +65,7 @@ const Statistics = () => {
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             Our Impact
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white">
+          <p className="text-lg mt-4 text-base leading-relaxed text-white">
             Since our inception, IndabaX Equatorial Guinea has made significant
             strides in promoting AI education<br></br> and collaboration across
             the continent.<br></br> Here are some of our key achievements:
