@@ -8,7 +8,7 @@ export default function UpcomingEvents() {
       className="py-20 px-6 bg-yellow"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Upcoming Events
         </h2>
@@ -39,10 +39,7 @@ export default function UpcomingEvents() {
                   {event.icon} {event.title}
                 </h3>
                 <p className="text-gray-600 mb-3">{event.description}</p>
-                <p className="text-gray-300">
-                  Learn More
-                  <ChevronDown className="inline ml-2" />
-                </p>
+                <p className="text-gray-300">Learn More</p>
                 {/* <p className="text-sm text-gray-500">
                   <strong>Date:</strong> {event.date}
                 </p>

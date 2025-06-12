@@ -15,6 +15,7 @@ import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
 import Sponsors from "../components/Sponsors";
 import Statistics from "../components/Statistics";
+import OrganisingTeamHome from "../components/TeamOnHome";
 
 export default function Home() {
   return (
@@ -131,7 +132,7 @@ export default function Home() {
       {/* Organising Team Section */}
 
       {/* Organising Team */}
-      <OrganisingTeam />
+      <OrganisingTeamHome />
 
       {/* About Section */}
 
