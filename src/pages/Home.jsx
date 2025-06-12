@@ -9,6 +9,7 @@ import {
   LucideAirplay,
   Star,
   Lightbulb,
+  ArrowUpRight,
 } from "lucide-react";
 import Testimonials from "../components/Testimonials";
 import CallToAction from "../components/CallToAction";
@@ -42,20 +43,20 @@ export default function Home() {
             piqued.
           </p>
 
-          <div className="flex flex-col md:flex-row items-stretch gap-12 w-full">
-            {/* Left: Image */}
-            <div className="w-full md:w-1/2 flex justify-center items-stretch">
+          <div className="flex flex-col md:flex-row items-stretch gap-10 w-full">
+            {/* Left: Image with aspect ratio */}
+            <div className="w-full md:w-1/2">
               <img
-                src="/why.jpg"
+                src="/why1.jpg"
                 alt="Why Attend"
-                className="rounded-xl shadow-xl w-full h-full md:h-full md:max-w-none"
+                className="w-full h-full object-contain aspect-video overflow-hidden"
               />
             </div>
 
             {/* Right: Benefits List */}
-            <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-              <div className="md:w-2/2 px-5 py-4 mt-6 bg-white lg:mt-20 lg:p-16">
-                <div className="grid grid-cols-1 gap-12 lg:gap-16 sm:grid-cols-2">
+            <div className="w-full md:w-1/2 px-4">
+              <div className="bg-white px-5 py-6 lg:py-16 lg:px-10 h-full rounded-xl shadow-md">
+                <div className="grid grid-cols-1 gap-12 sm:grid-cols-2">
                   <div className="flex items-start">
                     <PinIcon className="text-true-blue w-15 h-15" />
                     <div className="ml-5">
@@ -110,11 +111,20 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
+                <Link
+                  to="/events"
+                  aria-label="See IndabaX 2025"
+                  className="inline-block mt-10 bg-true-blue text-white hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"
+                >
+                  See IndabaX 2025 <ArrowUpRight className="inline ml-2" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       {/* Statistics Section */}
       <Statistics />
 
@@ -136,11 +146,11 @@ export default function Home() {
                   alt=""
                 />
 
-                <img
+                {/* <img
                   className="absolute origin-bottom-right scale-75 rounded-md -bottom-12 -right-12"
                   src="why2.jpg"
                   alt=""
-                />
+                /> */}
               </div>
             </div>
 
@@ -165,7 +175,7 @@ export default function Home() {
               <div className="mt-6">
                 <Link
                   to="/about"
-                  className="inline-block bg-true-blue hover:bg-true-blue text-black font-semibold py-2 px-5 rounded transition duration-300"
+                  className="inline-block bg-true-blue hover:bg-true-blue text-white font-semibold py-2 px-5 rounded transition duration-300"
                 >
                   Learn More
                 </Link>
@@ -174,10 +184,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <Sponsors />
       <UpcomingEvents />
       <Testimonials />
-      <Sponsors />
+
       <CallToAction />
     </main>
   );
