@@ -137,23 +137,13 @@ export default function Home() {
       {/* About Section */}
 
       <section className="py-10 sm:py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
-            <div className="pr-12 sm:pr-0">
-              <div className="relative max-w-xs mb-12">
-                <img
-                  className="object-bottom rounded-md"
-                  src="about.jpg"
-                  alt=""
-                />
-
-                {/* <img
-                  className="absolute origin-bottom-right scale-75 rounded-md -bottom-12 -right-12"
-                  src="why2.jpg"
-                  alt=""
-                /> */}
-              </div>
-            </div>
+            <img
+              className="object-bottom rounded-md"
+              src="aboutsec1.jpg"
+              alt=""
+            />
 
             <div>
               <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
