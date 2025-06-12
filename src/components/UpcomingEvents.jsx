@@ -1,6 +1,6 @@
 import eventsData from "../data/eventsData";
 import { Link } from "react-router-dom";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 export default function UpcomingEvents() {
   return (
@@ -39,7 +39,11 @@ export default function UpcomingEvents() {
                   {event.icon} {event.title}
                 </h3>
                 <p className="text-gray-600 mb-3">{event.description}</p>
-                <p className="text-sm text-gray-500">
+                <p className="text-gray-300">
+                  Learn More
+                  <ChevronDown className="inline ml-2" />
+                </p>
+                {/* <p className="text-sm text-gray-500">
                   <strong>Date:</strong> {event.date}
                 </p>
                 <p className="text-sm text-gray-500">
@@ -50,7 +54,7 @@ export default function UpcomingEvents() {
                 </p>
                 <p className="text-sm text-gray-500">
                   <strong>Organizer:</strong> {event.organizer}
-                </p>
+                </p> */}
               </div>
             </Link>
           ))}
