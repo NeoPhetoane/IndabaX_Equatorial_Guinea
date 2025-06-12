@@ -50,7 +50,7 @@ const Counter = ({ target, label }) => {
   return (
     <div ref={containerRef} className="text-center px-4">
       <div className="text-5xl font-semibold text-white tracking-tight">
-        <span className="text-white">{count}+</span>
+        <span className="text-gray-900">{count}+</span>
       </div>
       <p className="text-sm text-white mt-2 font-medium">{label}</p>
     </div>
@@ -67,8 +67,8 @@ const Statistics = () => {
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white">
             Since our inception, IndabaX Equatorial Guinea has made significant
-            strides in promoting AI education and collaboration across the
-            continent.<br></br> Here are some of our key achievements:
+            strides in promoting AI education<br></br> and collaboration across
+            the continent.<br></br> Here are some of our key achievements:
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 p-4">
             <Counter target={500} label="Participants Reached" />
