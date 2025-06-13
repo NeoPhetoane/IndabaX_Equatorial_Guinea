@@ -6,9 +6,9 @@ export default function Schedule() {
   // const event = eventsData.find((e) => String(e.id) === eventId);
   const schedule = eventsData.flatMap((event) => event.schedule || []);
   return (
-    <main className="font-sans text-gray-800">
+    <main className="font-[Jost] text-gray-800">
       {/* Hero Banner */}
-      <section className="relative bg-[url('/hero8.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
+      <section className="relative bg-[url('/schedule.png')] bg-cover bg-center text-white text-center py-32 px-4">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold">

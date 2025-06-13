@@ -27,9 +27,9 @@ export default function Registration() {
     alert("Registered successfully!");
   };
   return (
-    <main className="font-sans text-gray-800">
+    <main className="font-[Jost] text-gray-800">
       {/* Hero */}
-      <section className="bg-[url('/hero5.jpg')] bg-cover bg-center text-white text-center py-24 px-4 relative">
+      <section className="bg-[url('/hero5.png')] bg-cover bg-center text-white text-center py-24 px-4 relative">
         <div className="absolute inset-0 bg-black/30"></div>
         <div className="relative z-10">
           <h1 className="text-5xl font-bold">Register for IndabaX 2025</h1>

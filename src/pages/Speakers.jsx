@@ -8,13 +8,16 @@ export default function Speakers() {
   // const event = eventsData.find((e) => String(e.id) === eventId);
 
   return (
-    <main className="font-sans text-gray-800">
+    <main className="font-[Jost] text-gray-800">
       {/* Hero banner for Speaker page */}
-      <section className="bg-[url('/hero7.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold">2025 Speakers</h1>
-        <p className="mt-4 text-xl md:text-2xl">
-          Meet the inspiring minds shaping the future of AI in Africa
-        </p>
+      <section className="relative bg-[url('/speakersbanner.jpg')] bg-cover bg-[50%_20%] text-white text-center py-32 px-4">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative">
+          <h1 className="text-5xl md:text-6xl font-bold">2025 Speakers</h1>
+          <p className="mt-4 text-xl md:text-2xl">
+            Meet the inspiring minds shaping the future of AI in Africa
+          </p>
+        </div>
       </section>
       <section className="bg-white py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
