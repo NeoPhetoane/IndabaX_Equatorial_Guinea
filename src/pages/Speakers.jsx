@@ -36,7 +36,7 @@ export default function Speakers() {
                 <p className="text-sm text-gray-600">{speaker.title}</p>
 
                 {/* Hover info */}
-                <div className="absolute inset-0 bg-green-50 bg-opacity-95 rounded-lg flex flex-col items-center justify-center px-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 bg-gray-50 bg-opacity-10 rounded-lg flex flex-col items-center justify-center px-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h4 className="text-lg font-bold text-gray-800 mb-2">
                     {speaker.talkTitle}
                   </h4>
