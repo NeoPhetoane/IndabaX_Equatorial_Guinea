@@ -12,6 +12,7 @@ import Registration from "./components/Registration";
 import Events from "./pages/Events";
 import EventDetail from "./components/EventDetail";
 import ScrollToTop from "./components/ScrollToTop";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetail />} />
       </Routes>
+      <BackToTop />
       <Footer />
     </>
   );
