@@ -50,7 +50,7 @@ const Counter = ({ target, label }) => {
   return (
     <div ref={containerRef} className="text-center px-4">
       <div className="text-5xl font-semibold text-white tracking-tight">
-        <span className="text-gray-900">{count}+</span>
+        <span className="notranslate text-white">{count}+</span>
       </div>
       <p className="text-sm text-white mt-2 font-medium">{label}</p>
     </div>
@@ -60,7 +60,7 @@ const Counter = ({ target, label }) => {
 const Statistics = () => {
   return (
     <main>
-      <section className="bg-true-blue">
+      <section className="bg-blue-800">
         <div className="max-w-7xl mx-auto px-6 py-16 text-center">
           <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
             Our Impact
