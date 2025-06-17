@@ -65,7 +65,7 @@ export default function OrganisingTeam() {
 
   return (
     <main
-      className="max-w-7xl mx-auto py-16 px-6 text-center"
+      className="max-w-7xl mx-auto py-16 px-6 text-left md:text-center space-y-4 md:space-y-8"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
@@ -79,7 +79,7 @@ export default function OrganisingTeam() {
         {team.map((member) => (
           <div
             key={member.name}
-            className="flex flex-col items-center justify-between rounded-2xl p-6 text-center border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
+            className="flex flex-col justify-between rounded-2xl p-6 items-start md:items-center border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
           >
             <img
               src={member.img}

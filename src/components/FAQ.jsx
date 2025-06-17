@@ -18,12 +18,12 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQ = () => {
   return (
-    <section className="py-16 px-6 max-w-7xl mx-auto">
-      <div className=" mb-10 w-full flex flex-col items-center px-6">
+    <section className="py-16 px-4 max-w-7xl mx-auto">
+      <div className=" mb-10 w-full flex flex-col items-center text-left md:text-center">
         <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Frequently Asked Questions
         </h2>
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
+        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl ">
           Here are some common questions about the Deep Learning Indaba and
           IndabaX. If you have more questions, feel free to reach out to us!
         </p>

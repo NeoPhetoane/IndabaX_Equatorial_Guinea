@@ -66,7 +66,7 @@ export default function OrganisingTeamHome() {
 
   return (
     <main
-      className="max-w-7xl mx-auto py-16 text-left md:text-center px-4"
+      className="max-w-7xl mx-auto py-16 text-left md:text-center px-4 space-y-4 md:space-y-8"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">

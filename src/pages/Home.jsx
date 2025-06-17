@@ -25,18 +25,18 @@ export default function Home() {
 
       {/* Why Attend Section */}
       <section
-        className="bg-yellow py-20 px-6"
+        className="bg-yellow py-20 px-4"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
         {/* Heading and Paragraph */}
-        <div className="max-w-7xl mx-auto mb-10 w-full flex flex-col text-left md:text-center">
-          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+        <div className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-start md:items-center mb-6 md:mb-10">
+          <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl text-left md:text-center">
             Why Should You Attend?
           </h2>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-left md:text-center">
+          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center text-left md:text-center">
             Whether you are an AI enthusiast or just curious about what machine
             learning even is,{" "}
-            <span className="text-true-blue font-semibold">
+            <span className="text-true-blue font-semibold text-left md:text-center">
               IndabaX Equatorial Guinea
             </span>{" "}
             is the place to be. We are combining informative talks, hands-on

@@ -25,11 +25,11 @@ export default function About() {
 
       {/* About Deep Learning Indaba */}
 
-      <section className="max-w-7xl mx-auto w-full flex flex-col items-center py-20 px-6">
-        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+      <section className="max-w-7xl mx-auto w-full flex flex-col items-start md:items-center py-10 px-4">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl text-left md:text-center">
           Deep Learning Indaba
         </h2>
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
+        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-left md:text-center">
           The parent organisation of the{" "}
           <span className="text-true-blue font-semibold">IndabaX</span>. Before
           the IndabaX Equatorial Guinea, there was the Deep Learning Indaba:
@@ -60,11 +60,11 @@ export default function About() {
 
       {/* About IndabaX Equatorial Guinea */}
 
-      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center py-110px-6">
-        <h2 className="text-3xl font-bold text-center leading-tight text-gray-900 sm:text-4xl">
+      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-left md:items-center py-11 px-4">
+        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
           IndabaX Equatorial Guinea
         </h2>
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
+        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl">
           IndabaX is a local chapter of the Deep Learning Indaba, dedicated to
           fostering machine learning and AI education in each African Country.
           Therefore welcoming you to IndabaX Equatorial Guinea.
@@ -73,7 +73,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Mission */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center md:text-left">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-left md:text-left">
               Our Mission
             </h2>
             <p className="text-base md:text-lg text-gray-700 mb-4">
@@ -87,7 +87,7 @@ export default function About() {
 
           {/* Vision */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center md:text-left">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-left md:text-left">
               Our Vision
             </h2>
             <p className="text-base md:text-lg text-gray-700">
@@ -101,7 +101,7 @@ export default function About() {
 
           {/* Core Values */}
           <div>
-            <p className="text-lg md:text-xl text-true-blue font-semibold mb-6 text-center md:text-left">
+            <p className="text-lg md:text-xl text-true-blue font-semibold mb-6 text-left md:text-center">
               At IndabaX Equatorial Guinea, we aim for:
             </p>
             <div className="space-y-6 text-base md:text-lg text-gray-700">
@@ -157,8 +157,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-12 px-6 bg-white" id="hackathons">
-        <div className="max-w-7xl mx-auto text-center">
+      {/* Hackathons */}
+      <section
+        className="py-12 px-6 bg-white text-left md:text-center"
+        id="hackathons"
+      >
+        <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             IndabaX Hackathons
           </h2>
