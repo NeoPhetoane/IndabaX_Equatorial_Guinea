@@ -13,14 +13,19 @@ export default function About() {
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       {/* Hero banner for About page */}
-      <section className="bg-[url('/hero10.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold">About IndabaX</h1>
-        <p className="mt-4 text-xl md:text-2xl">Empowering AI in Africa</p>
+      <section className="relative bg-[url('/hero10.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <h1 className=" relative text-5xl md:text-6xl font-bold">
+          About IndabaX
+        </h1>
+        <p className="relative mt-4 text-xl md:text-2xl">
+          Empowering AI in Africa
+        </p>
       </section>
 
       {/* About Deep Learning Indaba */}
 
-      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center py-20 px-6">
+      <section className="max-w-7xl mx-auto w-full flex flex-col items-center py-20 px-6">
         <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
           Deep Learning Indaba
         </h2>
@@ -45,7 +50,8 @@ export default function About() {
                 Indaba aims to empower the next generation of African innovators
                 by promoting excellence in research, inclusion, and the
                 responsible use of AI to address the continent’s unique
-                challenges.
+                challenges. In ordere to put this mission into action, the
+                IndabaX events were created:
               </p>
             </div>
           </div>
@@ -54,12 +60,14 @@ export default function About() {
 
       {/* About IndabaX Equatorial Guinea */}
 
-      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center py-20 px-6">
-        <h2 className="text-3xl font-bold text-center leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
+      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center py-110px-6">
+        <h2 className="text-3xl font-bold text-center leading-tight text-gray-900 sm:text-4xl">
           IndabaX Equatorial Guinea
         </h2>
         <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
-          See what IndabaX is all about in Equatorial Guinea.
+          IndabaX is a local chapter of the Deep Learning Indaba, dedicated to
+          fostering machine learning and AI education in each African Country.
+          Therefore welcoming you to IndabaX Equatorial Guinea.
         </p>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -96,7 +104,7 @@ export default function About() {
             <p className="text-lg md:text-xl text-true-blue font-semibold mb-6 text-center md:text-left">
               At IndabaX Equatorial Guinea, we aim for:
             </p>
-            <div className="space-y-6">
+            <div className="space-y-6 text-base md:text-lg text-gray-700">
               {/* Card 1 */}
               <div className="flex items-start gap-4">
                 <div className="bg-gray-300 rounded-full p-3">
@@ -145,6 +153,43 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-6 bg-white" id="hackathons">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            IndabaX Hackathons
+          </h2>
+          <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
+            <div className="text-gray-700 text-base md:text-lg text-gray-700 text-left">
+              <p>
+                IndabaX Hackathons are dynamic, collaborative events where
+                participants come together to solve real-world problems using
+                data science, machine learning, and artificial intelligence.
+                These hackathons serve as a platform for innovation, hands-on
+                learning, and community building — empowering emerging
+                researchers, developers, and students from across Equatorial
+                Guinea to apply their skills and ideas.
+              </p>
+              <p>
+                Organized as part of the broader Deep Learning IndabaX
+                initiative, the hackathons foster local talent and provide an
+                inclusive space for individuals of all experience levels to
+                engage with pressing challenges in healthcare, agriculture,
+                climate, education, and more. With mentorship, teamwork, and
+                technical workshops, participants not only compete but also
+                learn and grow together.
+              </p>
+              <p>
+                Whether you're a beginner or an experienced coder, the IndabaX
+                Hackathon is your opportunity to make an impact, collaborate
+                with peers, and drive innovation that’s rooted in African
+                realities.
+              </p>
+            </div>
+            <img className="object-bottom rounded-md" src="hero4.jpg" alt="" />
           </div>
         </div>
       </section>
