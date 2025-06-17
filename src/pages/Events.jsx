@@ -5,28 +5,32 @@ import {
   Rocket,
   Cloud,
   Gamepad2,
+  ArrowUpRight,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import eventsData from "../data/eventsData";
 
 export default function Events() {
   return (
-    <main>
+    <main className="font-[Jost] text-gray-800">
       {/* Hero Section */}
-      <section className="bg-[url('/hero4.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
-        <h1 className="text-5xl md:text-6xl font-bold">Events</h1>
-        <p className="mt-4 text-xl md:text-2xl">
-          See out past and future Events
-        </p>
+      <section className="relative bg-[url('/eventsbanner.jpg')] bg-cover bg-center text-white text-center py-32 px-4">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative">
+          <h1 className="text-5xl md:text-6xl font-bold">Events</h1>
+          <p className="mt-4 text-xl md:text-2xl">
+            See out past and future Events
+          </p>
+        </div>
       </section>
       <section
         className="min-h-screen bg-white text-gray-800 px-4 py-16"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold mb-10 text-center">
-            Upcoming Events
-          </h2>
+          {/* <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl text-center mb-10">
+            Events
+          </h2> */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
             {eventsData.map((event) => (
               <Link
@@ -49,7 +53,7 @@ export default function Events() {
                     {event.icon} {event.title}
                   </h3>
                   <p className="text-gray-600 mb-3">{event.description}</p>
-                  <p className="text-sm text-gray-500">
+                  {/* <p className="text-sm text-gray-500">
                     <strong>Date:</strong> {event.date}
                   </p>
                   <p className="text-sm text-gray-500">
@@ -60,19 +64,16 @@ export default function Events() {
                   </p>
                   <p className="text-sm text-gray-500">
                     <strong>Organizer:</strong> {event.organizer}
-                  </p>
-                  {/* <div className="mt-4 flex space-x-3">
-                  <Link to={`/events/${event.id}/speakers`}>
-                    <button className="px-4 py-2 rounded-full bg-true-blue text-white font-medium hover:bg-blue-800 transition-colors duration-300">
-                      Speakers
-                    </button>
-                  </Link>
-                  <Link to={`/events/${event.id}/schedule`}>
-                    <button className="px-4 py-2 rounded-full bg-true-yellow text-white font-medium hover:bg-green-800 transition-colors duration-300">
-                      Schedule
-                    </button>
-                  </Link>
-                </div> */}
+                  </p> */}
+                  <div className="mt-4 flex space-x-3">
+                    <Link
+                      key={event.id}
+                      to={`/events/${event.id}`}
+                      className="inline-block bg-true-blue text-white hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"
+                    >
+                      See More <ArrowUpRight className="inline ml-2" />
+                    </Link>
+                  </div>
                 </div>
               </Link>
             ))}
