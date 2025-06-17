@@ -42,27 +42,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/speakers"
-            className={({ isActive }) =>
-              `${linkClass} ${
-                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
-              }`
-            }
-          >
-            Speakers
-          </NavLink>
-
-          <NavLink
-            to="/schedule"
-            className={({ isActive }) =>
-              `${linkClass} ${
-                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
-              }`
-            }
-          >
-            Schedule
-          </NavLink>
-          <NavLink
             to="/events"
             className={({ isActive }) =>
               `${linkClass} ${
@@ -71,6 +50,16 @@ const Navbar = () => {
             }
           >
             Events
+          </NavLink>
+          <NavLink
+            to="/speakers"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
+              }`
+            }
+          >
+            Speakers
           </NavLink>
 
           <NavLink
@@ -109,19 +98,20 @@ const Navbar = () => {
             About
           </Link>
           <Link
+            to="/events"
+            className={linkClass}
+            onClick={() => setIsOpen(false)}
+          >
+            Events
+          </Link>
+          <Link
             to="/speakers"
             className={linkClass}
             onClick={() => setIsOpen(false)}
           >
             Speakers
           </Link>
-          <Link
-            to="/schedule"
-            className={linkClass}
-            onClick={() => setIsOpen(false)}
-          >
-            Schedule
-          </Link>
+
           <Link
             to="/contact"
             className={linkClass}
