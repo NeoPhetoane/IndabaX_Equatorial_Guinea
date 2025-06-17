@@ -1,20 +1,35 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+
+const useAnimatedValue = (value) => {
+  const [animate, setAnimate] = useState(false);
+  const [prevValue, setPrevValue] = useState(value);
+
+  useEffect(() => {
+    if (value !== prevValue) {
+      setAnimate(true);
+      const timeout = setTimeout(() => setAnimate(false), 600);
+      setPrevValue(value);
+      return () => clearTimeout(timeout);
+    }
+  }, [value, prevValue]);
+
+  return animate;
+};
 
 const CountdownTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
-    const difference = +new Date(targetDate) - +new Date();
-    let timeLeft = {};
+    const diff = +new Date(targetDate) - +new Date();
+    const totalSeconds = Math.floor(diff / 1000);
+    const totalMinutes = Math.floor(totalSeconds / 60);
+    const totalHours = Math.floor(totalMinutes / 60);
+    const totalDays = Math.floor(totalHours / 24);
 
-    if (difference > 0) {
-      timeLeft = {
-        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((difference / 1000 / 60) % 60),
-        seconds: Math.floor((difference / 1000) % 60),
-      };
-    }
-
-    return timeLeft;
+    return {
+      days: totalDays % 365,
+      hours: totalHours % 24,
+      minutes: totalMinutes % 60,
+      seconds: totalSeconds % 60,
+    };
   };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -26,62 +41,35 @@ const CountdownTimer = ({ targetDate }) => {
     return () => clearInterval(timer);
   });
 
-  const circleSize = 100;
-  const radius = circleSize / 2 - 5;
-  const circumference = 2 * Math.PI * radius;
+  const daysAnimate = useAnimatedValue(timeLeft.days);
+  const hoursAnimate = useAnimatedValue(timeLeft.hours);
+  const minutesAnimate = useAnimatedValue(timeLeft.minutes);
+  const secondsAnimate = useAnimatedValue(timeLeft.seconds);
 
-  const renderCircle = (value, max, label) => {
-    const progress = (value / max) * circumference;
-
+  const timeBox = (label, value, color, animate) => {
     return (
-      <div className="flex flex-col items-center">
-        <svg width={circleSize} height={circleSize}>
-          <circle
-            cx={circleSize / 2}
-            cy={circleSize / 2}
-            r={radius}
-            stroke="#eee"
-            strokeWidth="8"
-            fill="none"
-          />
-          <circle
-            cx={circleSize / 2}
-            cy={circleSize / 2}
-            r={radius}
-            stroke="url(#gradient)"
-            strokeWidth="8"
-            strokeDasharray={circumference}
-            strokeDashoffset={circumference - progress}
-            fill="none"
-            strokeLinecap="round"
-            transform={`rotate(-90 ${circleSize / 2} ${circleSize / 2})`}
-          />
-          <defs>
-            <linearGradient id="gradient" x1="1" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="yellow" />
-              <stop offset="100%" stopColor="yellow" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <div className="-mt-20 text-gray-900 font-bold text-xl">
+      <div
+        className={`flex flex-col items-center p-4 sm:p-6 rounded-md text-white w-20 sm:w-24 md:w-28 transition-transform duration-500 ${
+          animate ? "flip" : ""
+        }`}
+        style={{ backgroundColor: color }}
+      >
+        <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">
           {String(value).padStart(2, "0")}
         </div>
-        <div className="text-xs text-gray-700 mt-2 uppercase">{label}</div>
+        <div className="text-xs sm:text-sm md:text-base uppercase text-yellow-400">
+          {label}
+        </div>
       </div>
     );
   };
 
   return (
-    <div>
-      <h2 className="text-3xl md:text-4xl font-bold text-true-yellow mb-6">
-        The CountDown Has Begun
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {renderCircle(timeLeft.days || 0, 30, "Days")}
-        {renderCircle(timeLeft.hours || 0, 24, "Hours")}
-        {renderCircle(timeLeft.minutes || 0, 60, "Minutes")}
-        {renderCircle(timeLeft.seconds || 0, 60, "Seconds")}
-      </div>
+    <div className="flex gap-4 sm:gap-6 justify-center">
+      {timeBox("Days", timeLeft.days, "", daysAnimate)}
+      {timeBox("Hours", timeLeft.hours, "", hoursAnimate)}
+      {timeBox("Mins", timeLeft.minutes, "", minutesAnimate)}
+      {timeBox("Sec", timeLeft.seconds, "", secondsAnimate)}
     </div>
   );
 };

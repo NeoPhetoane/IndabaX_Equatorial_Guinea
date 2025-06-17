@@ -1,6 +1,7 @@
-import Carousel from "./Carousel";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 
-export default function OrganisingTeam() {
+export default function OrganisingTeamHome() {
   const team = [
     {
       name: "Ana María Nchama",
@@ -65,7 +66,7 @@ export default function OrganisingTeam() {
 
   return (
     <main
-      className="max-w-7xl mx-auto py-16 px-6 text-left md:text-center space-y-4 md:space-y-8"
+      className="max-w-7xl mx-auto py-16 text-left md:text-center px-4 space-y-4 md:space-y-8"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
@@ -75,16 +76,16 @@ export default function OrganisingTeam() {
         Our team is dedicated to making IndabaX Equatorial Guinea a success. We
         are passionate about AI and committed to fostering a vibrant community.
       </p>
-      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        {team.map((member) => (
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        {team.slice(0, 4).map((member) => (
           <div
             key={member.name}
-            className="flex flex-col justify-between rounded-2xl p-6 items-start md:items-center border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
+            className="flex flex-col text-left md:text-center justify-between p-6 border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
           >
             <img
               src={member.img}
               alt={member.name}
-              className="w-40 h-40 mx-auto rounded-full object-cover shadow-md mb-4"
+              className="w-60 h-50 mx-auto object-cover rounded-md shadow-md mb-4"
             />
             <h3 className="text-xl font-bold text-gray-700">{member.name}</h3>
             <p className="text-sm text-true-blue font-semibold mb-2">
@@ -93,6 +94,14 @@ export default function OrganisingTeam() {
             <p className="text-sm text-gray-700">{member.bio}</p>
           </div>
         ))}
+      </div>
+      <div className="flex text-left md:text-center justify-left md:justify-center">
+        <Link
+          to="/about"
+          className="inline-block mt-10 bg-true-blue text-white hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"
+        >
+          See More Team Members <ArrowUpRight className="inline ml-2" />
+        </Link>
       </div>
     </main>
   );

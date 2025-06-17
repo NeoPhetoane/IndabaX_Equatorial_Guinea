@@ -37,8 +37,8 @@ const Counter = ({ target, label }) => {
       { threshold: 0.5 }
     );
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    if (node) {
+      observer.observe(node);
     }
     // Clean up observer on unmount
     return () => {
@@ -46,25 +46,39 @@ const Counter = ({ target, label }) => {
       clearInterval(timerRef.current);
     };
   }, [target]);
+
   return (
-    <div ref={containerRef} className="text-center p-4">
-      <div className="text-4xl font-bold text-true-blue">{count}+</div>
-      <p className="text-gray-700 mt-2">{label}</p>
+    <div ref={containerRef} className=" px-4 text-left md:text-center">
+      <div className="text-5xl font-semibold text-white tracking-tight">
+        <span className="notranslate text-white">{count}+</span>
+      </div>
+      <p className="text-sm text-white mt-2 font-medium">{label}</p>
     </div>
   );
 };
 
 const Statistics = () => {
   return (
-    <section className="bg-yellow py-16 px-6 text-center">
-      <h2 className="text-3xl font-bold text-gray-900 mb-10">Our Impact</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        <Counter target={500} label="Participants Reached" />
-        <Counter target={30} label="Workshops Held" />
-        <Counter target={15} label="Partners & Sponsors" />
-        <Counter target={20} label="Countries Connected" />
-      </div>
-    </section>
+    <main>
+      <section className="bg-blue-800">
+        <div className="max-w-7xl mx-auto px-6 py-16 text-left md:text-center">
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Our Impact
+          </h2>
+          <p className="text-lg mt-4 text-base leading-relaxed text-white">
+            Since our inception, IndabaX Equatorial Guinea has made significant
+            strides in promoting AI education<br></br> and collaboration across
+            the continent.<br></br> Here are some of our key achievements:
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 p-4">
+            <Counter target={500} label="Participants Reached" />
+            <Counter target={30} label="Workshops Held" />
+            <Counter target={15} label="Partners & Sponsors" />
+            <Counter target={20} label="Countries Connected" />
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 

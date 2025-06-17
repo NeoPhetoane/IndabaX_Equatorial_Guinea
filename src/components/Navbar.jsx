@@ -7,8 +7,8 @@ const Navbar = () => {
   const linkClass = "text-gray-900 hover:text-true-blue transition";
 
   return (
-    <header className="sticky top-0 z-50 bg-yellow shadow-md">
-      <nav className="max-w-7xl mx-auto px-2 py-4 flex justify-between items-center">
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <nav className="max-w-7xl mx-auto py-4 px-4 lg:px-0 flex justify-between items-center">
         {/* Logo */}
         <Link to="/">
           <div className="flex items-center space-x-2">
@@ -42,27 +42,6 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/speakers"
-            className={({ isActive }) =>
-              `${linkClass} ${
-                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
-              }`
-            }
-          >
-            Speakers
-          </NavLink>
-
-          <NavLink
-            to="/schedule"
-            className={({ isActive }) =>
-              `${linkClass} ${
-                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
-              }`
-            }
-          >
-            Schedule
-          </NavLink>
-          <NavLink
             to="/events"
             className={({ isActive }) =>
               `${linkClass} ${
@@ -71,6 +50,16 @@ const Navbar = () => {
             }
           >
             Events
+          </NavLink>
+          <NavLink
+            to="/speakers"
+            className={({ isActive }) =>
+              `${linkClass} ${
+                isActive ? "text-true-blue border-b-2 border-blue pb-1" : ""
+              }`
+            }
+          >
+            Speakers
           </NavLink>
 
           <NavLink
@@ -97,7 +86,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-yellow">
+        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-white">
           <Link to="/" className={linkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
@@ -109,19 +98,20 @@ const Navbar = () => {
             About
           </Link>
           <Link
+            to="/events"
+            className={linkClass}
+            onClick={() => setIsOpen(false)}
+          >
+            Events
+          </Link>
+          <Link
             to="/speakers"
             className={linkClass}
             onClick={() => setIsOpen(false)}
           >
             Speakers
           </Link>
-          <Link
-            to="/schedule"
-            className={linkClass}
-            onClick={() => setIsOpen(false)}
-          >
-            Schedule
-          </Link>
+
           <Link
             to="/contact"
             className={linkClass}

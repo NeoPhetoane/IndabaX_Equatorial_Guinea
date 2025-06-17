@@ -3,16 +3,16 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Carousel({ cards }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const [visibleCount, setVisibleCount] = useState(1);
   // Initialize visibleCount based on screen size
   useEffect(() => {
     const updateVisibleCount = () => {
       if (window.innerWidth < 640) {
         setVisibleCount(1); // Mobile
       } else if (window.innerWidth < 1024) {
-        setVisibleCount(2); // Tablet
+        setVisibleCount(1); // Tablet
       } else {
-        setVisibleCount(3); // Desktop
+        setVisibleCount(1); // Desktop
       }
     };
     updateVisibleCount();
@@ -24,9 +24,9 @@ export default function Carousel({ cards }) {
       if (window.innerWidth < 640) {
         setVisibleCount(1); // Mobile
       } else if (window.innerWidth < 1024) {
-        setVisibleCount(2); // Tablet
+        setVisibleCount(1); // Tablet
       } else {
-        setVisibleCount(3); // Desktop
+        setVisibleCount(1); // Desktop
       }
     };
     updateVisibleCount();
@@ -78,9 +78,9 @@ export default function Carousel({ cards }) {
       {hasMultipleCards && (
         <button
           onClick={prevSlide}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-true-blue p-2 rounded-full shadow"
+          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-900 p-2 rounded-full shadow"
         >
-          <ChevronLeft />
+          <ChevronLeft className="text-white" />
         </button>
       )}
 
@@ -88,9 +88,9 @@ export default function Carousel({ cards }) {
       {hasMultipleCards && (
         <button
           onClick={nextSlide}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-true-yellow p-2 rounded-full shadow"
+          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-900 p-2 rounded-full shadow"
         >
-          <ChevronRight />
+          <ChevronRight className="text-white" />
         </button>
       )}
 
@@ -101,7 +101,7 @@ export default function Carousel({ cards }) {
             key={idx}
             onClick={() => handleDotClick(idx)}
             className={`w-3 h-3 rounded-full transition-all duration-200 ${
-              idx === currentIndex ? "bg-true-yellow" : "bg-gray-300"
+              idx === currentIndex ? "bg-true-blue" : "bg-gray-300"
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />
