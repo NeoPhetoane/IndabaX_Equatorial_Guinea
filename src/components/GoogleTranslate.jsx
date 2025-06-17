@@ -51,7 +51,7 @@ export default function GoogleTranslate() {
         <select
           value={language}
           onChange={handleChange}
-          className="text-gray-900 hover:text-gray-300 transition focus:outline-none hover:bg-gray-200"
+          className="text-gray-900 hover:text-true-blue transition focus:outline-none"
         >
           <option value="" disabled hidden>
             Language

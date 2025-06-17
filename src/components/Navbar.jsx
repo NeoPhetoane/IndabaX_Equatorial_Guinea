@@ -97,7 +97,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-yellow">
+        <div className="md:hidden px-4 pb-4 flex flex-col space-y-2 bg-white">
           <Link to="/" className={linkClass} onClick={() => setIsOpen(false)}>
             Home
           </Link>
