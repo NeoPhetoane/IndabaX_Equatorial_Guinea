@@ -50,7 +50,7 @@ export default function Home() {
               <img
                 src="/why1.jpg"
                 alt="Why Attend"
-                className="w-full h-full object-contain aspect-video overflow-hidden"
+                className="w-full h-full object-bottom"
               />
             </div>
 
@@ -136,11 +136,11 @@ export default function Home() {
 
       {/* About Section */}
 
-      <section className="py-10 sm:py-16 lg:py-24">
+      <section className="py-10 px-4 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
             <img
-              className="object-bottom rounded-md"
+              className="w-full h-full object-bottom rounded-md"
               src="aboutsec1.jpg"
               alt=""
             />
