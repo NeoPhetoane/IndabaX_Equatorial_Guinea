@@ -14,7 +14,7 @@ export default function CallToAction() {
           </p>
           <Link
             to="/registration"
-            className="bg-white hover:bg-yellow text-true-blue hover:text-true-blue font-semibold py-3 px-6 rounded-lg shadow transition"
+            className="bg-white hover:bg-yellow-300 text-true-blue hover:text-true-blue font-semibold py-3 px-6 rounded-lg shadow transition"
           >
             Register Now
           </Link>

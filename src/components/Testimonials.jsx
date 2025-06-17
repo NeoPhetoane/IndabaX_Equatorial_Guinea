@@ -47,7 +47,7 @@ const testimonials = [
 
 function TestimonialCard({ t }) {
   return (
-    <section className="py-10 bg-white sm:py-16 lg:py-24">
+    <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
       <div className="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="md:flex md:items-center md:justify-center md:space-x-14">
           <div className="relative flex-shrink-0 w-48 h-48 mx-auto md:mx-0 md:mr-8">

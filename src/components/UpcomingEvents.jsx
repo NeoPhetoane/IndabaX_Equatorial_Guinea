@@ -39,7 +39,10 @@ export default function UpcomingEvents() {
                   {event.icon} {event.title}
                 </h3>
                 <p className="text-gray-600 mb-3">{event.description}</p>
-                <p className="text-gray-300">Learn More</p>
+                <p className="inline-block text-blue-300 underline underline-offset-4 decoration-2 hover:text-blue-500">
+                  Learn More
+                </p>
+
                 {/* <p className="text-sm text-gray-500">
                   <strong>Date:</strong> {event.date}
                 </p>
