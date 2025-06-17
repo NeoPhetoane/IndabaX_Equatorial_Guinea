@@ -80,10 +80,10 @@ export default function Testimonials() {
   return (
     <main>
       <section
-        className="py-20 px-6"
+        className="py-20 px-4"
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
-        <div className="max-w-6xl mx-auto text-center">
+        <div className="max-w-7xl mx-auto text-left md:text-center">
           <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             What People Are Saying
           </h2>

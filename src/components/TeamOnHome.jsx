@@ -66,7 +66,7 @@ export default function OrganisingTeamHome() {
 
   return (
     <main
-      className="max-w-7xl mx-auto py-16 text-center"
+      className="max-w-7xl mx-auto py-16 text-left md:text-center px-4"
       style={{ backgroundImage: "url('/bgwhite.png')" }}
     >
       <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
@@ -76,11 +76,11 @@ export default function OrganisingTeamHome() {
         Our team is dedicated to making IndabaX Equatorial Guinea a success. We
         are passionate about AI and committed to fostering a vibrant community.
       </p>
-      <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {team.slice(0, 4).map((member) => (
           <div
             key={member.name}
-            className="flex flex-col items-center justify-between p-6 text-center border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
+            className="flex flex-col text-left md:text-center justify-between p-6 border border-gray-200 bg-white shadow-md h-full min-h-[340px]"
           >
             <img
               src={member.img}
@@ -95,7 +95,7 @@ export default function OrganisingTeamHome() {
           </div>
         ))}
       </div>
-      <div className="flex justify-center">
+      <div className="flex text-left md:text-center justify-left md:justify-center">
         <Link
           to="/about"
           className="inline-block mt-10 bg-true-blue text-white hover:bg-yellow hover:text-true-blue font-semibold py-3 px-8 rounded-lg transition"

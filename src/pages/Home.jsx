@@ -29,11 +29,11 @@ export default function Home() {
         style={{ backgroundImage: "url('/bgwhite.png')" }}
       >
         {/* Heading and Paragraph */}
-        <div className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-center">
+        <div className="max-w-7xl mx-auto mb-10 w-full flex flex-col text-left md:text-center">
           <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl">
             Why Should You Attend?
           </h2>
-          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-center">
+          <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-left md:text-center">
             Whether you are an AI enthusiast or just curious about what machine
             learning even is,{" "}
             <span className="text-true-blue font-semibold">
