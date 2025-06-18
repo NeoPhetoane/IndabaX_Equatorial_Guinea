@@ -67,10 +67,10 @@ const Statistics = () => {
           </h2>
           <p className="text-lg mt-4 text-base leading-relaxed text-white">
             Since our inception, IndabaX Equatorial Guinea has made significant
-            strides in promoting AI education<br></br> and collaboration across
-            the continent.<br></br> Here are some of our key achievements:
+            strides in promoting AI education and collaboration across the
+            continent.<br></br> Here are some of our key achievements:
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 p-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 p-4 mt-10">
             <Counter target={500} label="Participants Reached" />
             <Counter target={30} label="Workshops Held" />
             <Counter target={15} label="Partners & Sponsors" />
