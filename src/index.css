@@ -104,3 +104,7 @@ body {
 .border-blue {
   border-color: var(--color-primary);
 }
+
+.hover\:border-yellow:hover {
+  border-color: var(--color-secondary);
+}

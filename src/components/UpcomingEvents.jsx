@@ -1,6 +1,6 @@
 import eventsData from "../data/eventsData";
 import { Link } from "react-router-dom";
-import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export default function UpcomingEvents() {
   return (
@@ -19,11 +19,7 @@ export default function UpcomingEvents() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {eventsData.slice(0, 3).map((event) => (
-            <Link
-              to={`/events/${event.id}`}
-              key={event.id}
-              className="group relative bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden border border-gray-200"
-            >
+            <div className="group relative bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-2xl overflow-hidden border border-gray-200">
               <div
                 className="absolute left-0 top-0 h-full w-1.5 rounded-r-full"
                 style={{ backgroundColor: `var(--tw-${event.barColor})` }}
@@ -39,24 +35,15 @@ export default function UpcomingEvents() {
                   {event.icon} {event.title}
                 </h3>
                 <p className="text-gray-600 mb-3">{event.description}</p>
-                <p className="inline-block text-blue-300 underline underline-offset-4 decoration-2 hover:text-blue-500">
+                <Link
+                  to={`/events/${event.id}`}
+                  key={event.id}
+                  className="inline-block text-true-blue hover:border-yellow border border-blue px-4 py-2 rounded-full decoration-2"
+                >
                   Learn More
-                </p>
-
-                {/* <p className="text-sm text-gray-500">
-                  <strong>Date:</strong> {event.date}
-                </p>
-                <p className="text-sm text-gray-500">
-                  <strong>Time:</strong> {event.time}
-                </p>
-                <p className="text-sm text-gray-500">
-                  <strong>Location:</strong> {event.location}
-                </p>
-                <p className="text-sm text-gray-500">
-                  <strong>Organizer:</strong> {event.organizer}
-                </p> */}
+                </Link>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         <Link
