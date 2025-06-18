@@ -45,7 +45,7 @@ const Contact = () => {
                       strokeWidth={1}
                     />
                     <p class="mt-6 text-lg font-medium text-gray-900 break-all">
-                      indabaXequatorialguinea@gmail.com
+                      indabaXequatorialguinea@gmail<br></br>.com
                     </p>
                     {/* <p class="mt-1 text-lg font-medium text-gray-900">
                      hr@example.com 
