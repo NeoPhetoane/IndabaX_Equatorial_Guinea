@@ -60,15 +60,15 @@ export default function About() {
 
       {/* About IndabaX Equatorial Guinea */}
 
-      <section className="max-w-7xl mx-auto mb-10 w-full flex flex-col items-left md:items-center py-11 px-4">
-        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
+      <section className="max-w-7xl mx-auto w-full flex flex-col items-left py-10 px-4">
+        {/* <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl">
           IndabaX Equatorial Guinea
         </h2>
         <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl">
           IndabaX is a local chapter of the Deep Learning Indaba, dedicated to
           fostering machine learning and AI education in each African Country.
           Therefore welcoming you to IndabaX Equatorial Guinea.
-        </p>
+        </p> */}
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Mission */}
@@ -158,10 +158,7 @@ export default function About() {
       </section>
 
       {/* Hackathons */}
-      <section
-        className="py-12 px-6 bg-white text-left md:text-center"
-        id="hackathons"
-      >
+      <section className="py-1 px-4 text-left mb-10" id="hackathons">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             IndabaX Hackathons
