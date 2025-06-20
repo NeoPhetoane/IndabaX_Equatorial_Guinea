@@ -28,6 +28,9 @@ const FAQ = () => {
           IndabaX. If you have more questions, feel free to reach out to us!
         </p>
       </div>
+      {/* Content Section - Two Columns */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> */}
+      {/* FAQs on the Left */}
       <div className="max-w-3xl mx-auto">
         <FAQItem
           question="What is the Deep Learning Indaba?"
@@ -49,7 +52,25 @@ const FAQ = () => {
           question="How can I contribute?"
           answer="You can volunteer, become a mentor, give a talk, or partner with us to support the community."
         />
+        {/* <FAQItem question="" answer="" /> */}
       </div>
+
+      {/* Images on the Right */}
+      {/* <div className="grid grid-cols-3 gap-4 h-full">
+          <div
+            className="bg-transparent flex items-center justify-center p-6 bg-cover bg-center"
+            style={{ backgroundImage: "url('/dlifaq.jpg')" }}
+          ></div>
+          <div
+            className="bg-transparent flex items-center justify-center p-6 bg-cover bg-center"
+            style={{ backgroundImage: "url('/logo.png')" }}
+          ></div>
+          <div
+            className="bg-transparent flex items-center justify-center p-6 bg-cover bg-center"
+            style={{ backgroundImage: "url('/ixfaq.jpg')" }}
+          ></div>
+        </div>
+      </div> */}
     </section>
   );
 };
