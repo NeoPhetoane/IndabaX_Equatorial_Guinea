@@ -31,7 +31,7 @@ export default function SiteHero() {
               Empowering the future of <br></br>machine learning across Africa,
               one conversation at a time.
             </p>
-            <p className="text-2xl md:text-2xl font-semibold text-true-blue">
+            <p className="text-2xl md:text-2xl font-semibold text-white">
               Be sure to not miss the next event:
             </p>
             <div className="flex items-center gap-2">
