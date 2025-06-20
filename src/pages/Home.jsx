@@ -141,7 +141,7 @@ export default function Home() {
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
             <img
               className="w-full h-full object-bottom rounded-md"
-              src="aboutsec1.jpg"
+              src="about.png"
               alt=""
             />
 

@@ -16,13 +16,17 @@ export default function Sponsors() {
       name: "AI Expo Africa",
       logo: "/ai_expo_2023.png",
     },
+    // {
+    //   name: "Google DeepMind",
+    //   logo: "/Google_DeepMind.png",
+    // },
     {
-      name: "DanceMedia Events Calendar",
-      logo: "/sponsors/dancemedia.png",
+      name: "IMB",
+      logo: "/ibm.jpg",
     },
     {
-      name: "EventsAir",
-      logo: "/sponsors/eventsair.png",
+      name: "OpenAI",
+      logo: "/openai-lockup.png",
     },
   ];
 

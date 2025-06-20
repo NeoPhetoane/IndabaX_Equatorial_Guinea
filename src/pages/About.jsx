@@ -26,19 +26,24 @@ export default function About() {
       {/* About Deep Learning Indaba */}
 
       <section className="max-w-7xl mx-auto w-full flex flex-col items-start md:items-center py-10 px-4">
-        <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl text-left md:text-center">
-          Deep Learning Indaba
-        </h2>
-        <p className="text-lg text-gray-700 mb-10 leading-relaxed max-w-3xl text-left md:text-center">
-          The parent organisation of the{" "}
-          <span className="text-true-blue font-semibold">IndabaX</span>. Before
-          the IndabaX Equatorial Guinea, there was the Deep Learning Indaba:
-        </p>
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="grid items-center md:grid-cols-2 gap-y-10 md:gap-x-20">
-            <img className="object-bottom rounded-md" src="hero3.jpg" alt="" />
+            <img
+              className="object-bottom rounded-md w-full h-full"
+              src="hero3.jpg"
+              alt=""
+            />
 
-            <div>
+            <div className="flex flex-wrap">
+              <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl text-left">
+                Deep Learning Indaba
+              </h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-3xl text-left">
+                The parent organisation of the{" "}
+                <span className="text-true-blue font-semibold">IndabaX</span>.
+                Before the IndabaX Equatorial Guinea, there was the Deep
+                Learning Indaba:
+              </p>
               <h2 className="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl"></h2>
               <p className="mt-4 text-base leading-relaxed text-gray-600">
                 The Deep Learning Indaba is a pan-African initiative dedicated
@@ -101,14 +106,14 @@ export default function About() {
 
           {/* Core Values */}
           <div>
-            <p className="text-lg md:text-xl text-true-blue font-semibold mb-6 text-left md:text-center">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-left md:text-left">
               At IndabaX Equatorial Guinea, we aim for:
-            </p>
+            </h2>
             <div className="space-y-6 text-base md:text-lg text-gray-700">
               {/* Card 1 */}
               <div className="flex items-start gap-4">
-                <div className="bg-gray-300 rounded-full p-3">
-                  <HeartHandshake className="text-true-yellow w-6 h-6" />
+                <div className="bg-yellow rounded-full p-3">
+                  <HeartHandshake className="text-true-blue w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-md font-semibold text-gray-800">
@@ -123,8 +128,8 @@ export default function About() {
 
               {/* Card 2 */}
               <div className="flex items-start gap-4">
-                <div className="bg-gray-300 rounded-full p-3">
-                  <HandshakeIcon className="text-true-yellow w-6 h-6" />
+                <div className="bg-yellow rounded-full p-3">
+                  <HandshakeIcon className="text-true-blue w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-md font-semibold text-gray-800">
@@ -139,8 +144,8 @@ export default function About() {
 
               {/* Card 3 */}
               <div className="flex items-start gap-4">
-                <div className="bg-gray-300 rounded-full p-3">
-                  <LucideShrub className="text-true-yellow w-6 h-6" />
+                <div className="bg-yellow rounded-full p-3">
+                  <LucideShrub className="text-true-blue w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-md font-semibold text-gray-800">
@@ -190,7 +195,11 @@ export default function About() {
                 realities.
               </p>
             </div>
-            <img className="object-bottom rounded-md" src="hero4.jpg" alt="" />
+            <img
+              className="object-bottom rounded-md"
+              src="hackathon.jpg"
+              alt=""
+            />
           </div>
         </div>
       </section>
