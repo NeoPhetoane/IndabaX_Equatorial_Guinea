@@ -1,4 +1,4 @@
-import { Phone, MailOpen, Smartphone } from "lucide-react";
+import { Phone, MailOpen, Smartphone, MonitorSmartphone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -45,7 +45,7 @@ const Contact = () => {
                       strokeWidth={1}
                     />
                     <p class="mt-6 text-lg font-medium text-gray-900 break-all">
-                      indabaXequatorialguinea@gmail<br></br>.com
+                      indabaXequatorialguinea<br></br>@gmail.com
                     </p>
                     {/* <p class="mt-1 text-lg font-medium text-gray-900">
                      hr@example.com 
@@ -55,7 +55,7 @@ const Contact = () => {
 
                 <div class="overflow-hidden bg-white rounded-xl">
                   <div class="p-6 text-center">
-                    <Smartphone
+                    <MonitorSmartphone
                       class="flex-shrink-0 w-10 h-10 mx-auto text-true-blue"
                       strokeWidth={1}
                     />
